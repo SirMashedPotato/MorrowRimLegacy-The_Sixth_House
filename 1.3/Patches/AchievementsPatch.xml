@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Achievements Expanded</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs</xpath>
+					<value>
+
+						<AchievementsExpanded.AchievementTabDef>
+							<defName>MorrowRim_AchievementsTab</defName>
+							<label>MorrowRim</label>
+						</AchievementsExpanded.AchievementTabDef>
+						
+						<!--
+						<AchievementsExpanded.Reward_MapIncident>
+							<defName>MorrowRim_RewardDagothClaims</defName>
+							<label>Dagoth Claims a Settlement</label>
+							<tab>MorrowRim_AchievementsTab</tab>
+							
+							<cost>15</cost>
+							<incident>Dagoth_RewardBlightSettlementClaimed</incident>
+						</AchievementsExpanded.Reward_MapIncident>
+						-->
+
+						<AchievementsExpanded.Reward_MapIncident>
+							<defName>MorrowRim_RewardDagothCorprus</defName>
+							<label>Infect Colonists With Corprus</label>
+							<tab>MorrowRim_AchievementsTab</tab>
+							
+							<cost>25</cost>
+							<incident>MorrowRim_RewardDisease_Corprus</incident>
+						</AchievementsExpanded.Reward_MapIncident>
+						
+						<!-- Kills -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothSlayCorprus</defName>
+							<label>Putting Them Out of Their Misery</label>
+							<description>Slay 50 corprus victims who are not controlled by Dagoth Ur</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KillTracker">
+								<factionDefs>
+									<li>MorrowRim_Corprus</li>
+								</factionDefs>
+								<count>50</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothSlayCorprus</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothSlayCultists</defName>
+							<label>Buoyant Armiger</label>
+							<description>Slay 150 of Dagoth's Cultists</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KillTracker">
+								<factionDefs>
+									<li>MorrowRim_SixthHouse</li>
+								</factionDefs>
+								<count>150</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothSlayCultists</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothGhoul</defName>
+							<label>Not a Fan of Poetry</label>
+							<description>Slay 25 Ash Ghouls</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KillTracker">
+								<raceDef>Dagoth_Ghoul</raceDef>
+								<count>25</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothGhoul</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothVampire</defName>
+							<label>One Down, Six to Go</label>
+							<description>Slay an Ash Vampire</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KillTracker">
+								<raceDef>Dagoth_Vampire</raceDef>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothVampire</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothVampireMany</defName>
+							<label>Slightly More Than Seven</label>
+							<description>Slay 25 Ash Vampire</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KillTracker">
+								<raceDef>Dagoth_Vampire</raceDef>
+								<count>25</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothVampireMany</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothSleeper</defName>
+							<label>Sending Them to Sleep Eternal</label>
+							<description>Slay 25 Ascended Sleeper</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KillTracker">
+								<raceDef>Dagoth_Ascended</raceDef>
+								<count>25</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothSleeper</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<!-- Hediff -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothTouched</defName>
+							<label>Show Me Where He Touched You</label>
+							<description>Have a colonist gain the 'Touched By Dagoth Ur' trait from a dream incident</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.HediffTracker">
+								<def>Dagoth_HiddenTouched</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothTouched</texPath>
+							<points>5</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothBlights</defName>
+							<label>Collector of Blights</label>
+							<description>Have a single colonist become affected by all four ash blights at the same time</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.MultiHediffTracker">
+								<defs>
+									<li>
+										<key>Dagoth_Blight_AshChancre</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>Dagoth_Blight_AshWoe</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>Dagoth_Blight_BlackHeart</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>Dagoth_Blight_Chanthrax</key>
+										<value>1</value>
+									</li>
+								</defs>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothBlights</texPath>
+							<points>50</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothCorprusImmunity</defName>
+							<label>I've Never Felt Better in My Life</label>
+							<description>Have a colonist gain permanent immunity to corprus</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.HediffTracker">
+								<def>MorrowRim_CorprusSurvived</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothCorprusImmunity</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+	
+						<!-- Item -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothBellHammer</defName>
+							<label>Also Good For Ringing Skulls</label>
+							<description>Obtain a Sixth House Bell Hammer</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemTracker">
+								<def>Dagoth_BellHammer</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothBellHammer</texPath>
+							<points>5</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothTouchArtifact</defName>
+							<label>Careful Where You Point That</label>
+							<description>Obtain a Dagoths Divine Touch Sigil</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemTracker">
+								<def>Dagoth_DagothsDivineTouch</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothTouchArtifact</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothAshSalts</defName>
+							<label>Not Meant For Inhaling</label>
+							<description>Obtain 100 bowls of ash salts</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemTracker">
+								<def>Dagoth_AshSalts</def>
+								<count>100</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothAshSalts</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothWeepings</defName>
+							<label>Who Would Buy These?</label>
+							<description>Sell 1,000 rolls of corprus weepings</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.TraderTracker">
+								<def>MorrowRim_CorprusWeepings</def>
+								<count>1000</count>
+								<singleTransaction>false</singleTransaction>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothWeepings</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothDelight</defName>
+							<label>Delightful</label>
+							<description>Craft 50 bottles of Divayth's Delight</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemCraftTracker">
+								<def>Dagoth_BlightBeGone</def>
+								<count>50</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothDelight</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<!-- Settlements -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothSettlementDestroy</defName>
+							<label>That Wasn't Yours Anyway</label>
+							<description>Destroy a Sixth House settlement</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.SettlementDefeatTracker">
+								<def>MorrowRim_SixthHouse</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothSettlementDestroy</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<!-- Incidents -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothSettlementClaim</defName>
+							<label>What's Yours is Mine</label>
+							<description>Have Dagoth Ur claim five settlements</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.IncidentTracker">
+								<def>Dagoth_BlightSettlementClaimed</def>
+								<count>5</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothSettlementClaim</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothLeftovers</defName>
+							<label>Where Did They Go?</label>
+							<description>Have colonists mysteriously disappear in their sleep</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.IncidentTracker">
+								<def>Dagoth_TheLeftovers</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothLeftovers</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<!-- Records -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementDagothDreams</defName>
+							<label>I Just Want To Sleep</label>
+							<description>Have a single colonist be targeted by 50 Dagoth dream incidents</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundDagoth</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.RecordEventTracker">
+								<def>MorrowRim_DagothDreamsTargeted</def>
+								<count>50</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementDagothDreams</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+					
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

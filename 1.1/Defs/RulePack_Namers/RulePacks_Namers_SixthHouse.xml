@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>MorrowRim_NamerSettlementSixthHouse</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[SixthHouseSettlements]</li>
+      </rulesStrings>
+	  <rulesFiles>
+        <li>SixthHouseSettlements->SixthHouseNames/SixthHouseSettlements</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>MorrowRim_NamerSixthHouseMember</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Dagoth [a]</li>
+      </rulesStrings>
+	  <rulesFiles>
+        <li>a->SixthHouseNames/SixthHouseNamesA</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>MorrowRim_NamerFactionSixthHouse</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[partA] [partB]</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>partA->SixthHouseNames/SixthHouseFactionNamesA</li>
+        <li>partB->SixthHouseNames/SixthHouseFactionNamesB</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

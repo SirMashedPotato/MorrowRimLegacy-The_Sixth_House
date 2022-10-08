@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DamageDef ParentName="Flame" Name="DagothDamageBase" Abstract="True">
+		<label>burn</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+	</DamageDef>
+
+	<DamageDef ParentName="DagothDamageBase">
+		<defName>Dagoth_ParalyticBreath</defName>
+		<label>paralysing breath</label>
+		<additionalHediffs>
+		  <li>
+			<hediff>MorrowRim_Paralysis</hediff>
+		  </li>
+		</additionalHediffs>
+		<explosionCellFleck>ShotHit_Dirt</explosionCellFleck>
+	</DamageDef>
+	
+	<DamageDef ParentName="DagothDamageBase">
+		<defName>Dagoth_DivineBreath</defName>
+		<label>divine breath</label>
+		<workerClass>MorrowRim_Dagoth.DamageWorker_DagothInjury</workerClass>
+		<explosionCellFleck>ShotHit_Dirt</explosionCellFleck>
+	</DamageDef>
+	
+	<DamageDef ParentName="DagothDamageBase">
+		<defName>Dagoth_DivineGaze</defName>
+		<label>divine gaze</label>
+		<additionalHediffs>
+		  <li>
+			<hediff>Dagoth_IntensePain</hediff>
+			<severityPerDamageDealt>0.1</severityPerDamageDealt>
+		  </li>
+		</additionalHediffs>
+		<explosionCellFleck>ShotHit_Dirt</explosionCellFleck>
+	</DamageDef>
+	
+	<!-- blights -->
+
+	<DamageDef ParentName="DagothDamageBase">
+		<defName>Dagoth_Blight_AshChancre</defName>
+		<label>ash-chancre breath</label>
+		<additionalHediffs>
+		  <li>
+			<hediff>Dagoth_Blight_AshChancre</hediff>
+			<severityPerDamageDealt>0.01</severityPerDamageDealt>
+		  </li>
+		</additionalHediffs>
+		<explosionCellFleck>ShotHit_Dirt</explosionCellFleck>
+	</DamageDef>
+	
+	<DamageDef ParentName="DagothDamageBase">
+		<defName>Dagoth_Blight_AshWoe</defName>
+		<label>ash-woe breath</label>
+		<additionalHediffs>
+		  <li>
+			<hediff>Dagoth_Blight_AshWoe</hediff>
+			<severityPerDamageDealt>0.01</severityPerDamageDealt>
+		  </li>
+		</additionalHediffs>
+		<explosionCellFleck>ShotHit_Dirt</explosionCellFleck>
+	</DamageDef>
+	
+	<DamageDef ParentName="DagothDamageBase">
+		<defName>Dagoth_Blight_BlackHeart</defName>
+		<label>black-heart breath</label>
+		<additionalHediffs>
+		  <li>
+			<hediff>Dagoth_Blight_BlackHeart</hediff>
+			<severityPerDamageDealt>0.01</severityPerDamageDealt>
+		  </li>
+		</additionalHediffs>
+		<explosionCellFleck>ShotHit_Dirt</explosionCellFleck>
+	</DamageDef>
+	
+	<DamageDef ParentName="DagothDamageBase">
+		<defName>Dagoth_Blight_Chanthrax</defName>
+		<label>chanthrax breath</label>
+		<additionalHediffs>
+		  <li>
+			<hediff>Dagoth_Blight_Chanthrax</hediff>
+			<severityPerDamageDealt>0.01</severityPerDamageDealt>
+		  </li>
+		</additionalHediffs>
+		<explosionCellFleck>ShotHit_Dirt</explosionCellFleck>
+	</DamageDef>
+	
+</Defs>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>MorrowRim - Dunmer Factions</li>
+      <li>MorrowRim - Dunmer Factions Medieval Edition</li>
+    </mods>
+
+    <match Class="PatchOperationSequence">
+		<operations>
+
+			<!-- replace dreamer -->
+			
+			<li Class="PatchOperationReplace">
+			<xpath>/Defs/PawnKindDef[defName = "Dagoth_TribalDreamer"]</xpath>
+				<value>
+					<PawnKindDef ParentName="DunmerTribalBase">
+						<defName>Dagoth_TribalDreamer</defName>
+						<defaultFactionType>MorrowRim_SixthHouse</defaultFactionType>
+						<label>dreamer</label>
+						<combatPower>35</combatPower>
+						<chemicalAddictionChance>0.10</chemicalAddictionChance>
+						<invNutrition>0.1</invNutrition>
+						<itemQuality>Poor</itemQuality>
+						<gearHealthRange>0.2~1.1</gearHealthRange>
+						<apparelMoney>10~30</apparelMoney>
+						<weaponMoney>90~150</weaponMoney>
+						<weaponTags>
+						  <li>NeolithicMeleeBasic</li>
+						</weaponTags>
+						<techHediffsMoney>50~50</techHediffsMoney>
+						<techHediffsTags>
+						  <li>Poor</li>
+						</techHediffsTags>
+						<techHediffsChance>0.15</techHediffsChance>
+					</PawnKindDef>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName = "MorrowRim_SixthHouse"]</xpath>
+				<value>
+					<pawnNameMaker>MorrowRim_NamerPersonDunmerMale</pawnNameMaker>
+					<pawnNameMakerFemale>MorrowRim_NamerPersonDunmerFemale</pawnNameMakerFemale>
+				</value>
+			</li>
+			
+		</operations>
+    </match>
+  </Operation>
+
+</Patch>

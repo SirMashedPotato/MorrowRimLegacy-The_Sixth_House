@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="Dagoth_BaseProjectile" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Bullet</thingClass>
+		<label>energy bolt</label>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+		  <shaderType>Transparent</shaderType>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef Name="Dagoth_BaseMagic_Bolt" Abstract="True" ParentName="Dagoth_BaseMagic_AdvancedSingle">	
+		<statBases>
+			<MarketValue>550</MarketValue>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.90</AccuracyMedium>
+			<AccuracyLong>0.80</AccuracyLong>
+			<RangedWeapon_Cooldown>1.9</RangedWeapon_Cooldown>
+		</statBases>
+		<thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+		<weaponTags>
+		  <li>Dagoth_BasicWeaponMagic</li>
+		</weaponTags>
+		<graphicData>
+			  <texPath>MorrowRim/Dagoth/DagothWeapon_HeartFire</texPath>
+			  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingDef>
+
+		
+	<!-- ash ghouls + ^ nonsingle -->
+	
+	<ThingDef ParentName="Dagoth_BaseMagic_Bolt">
+		<defName>Dagoth_FireBolt</defName>
+		<label>fire bolt sigil</label>
+		<description>A weapon of unknown origin, possibly Dwemer, or something even more ancient. Creates a fast moving projectile when activated. The projectile releases intense heat upon impact, burning its target and causing heatstroke buildup.</description>
+		<verbs>
+		  <li>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Dagoth_ProjectileFireBolt</defaultProjectile>
+			<warmupTime>1.0</warmupTime>
+			<range>36.9</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Shot_ChargeBlaster</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="Dagoth_BaseProjectile">
+		<defName>Dagoth_ProjectileFireBolt</defName>
+		<projectile>
+		  <damageDef>Dagoth_DamageFireBolt</damageDef>
+		  <damageAmountBase>18</damageAmountBase>
+		  <stoppingPower>1.5</stoppingPower>
+		  <speed>70</speed>
+		</projectile>
+		<graphicData>
+		  <texPath>Things/Projectile/Charge_Small_Recolourable</texPath>
+		  <color>(238,139,96)</color>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="Dagoth_BaseMagic_Bolt">
+		<defName>Dagoth_ToxicBolt</defName>
+		<label>toxic bolt sigil</label>
+		<description>A weapon of unknown origin, possibly Dwemer, or something even more ancient. Creates a fast moving projectile when activated. The projectile releases intense toxins upon impact, burning its target and causing toxic buildup.</description>
+		<verbs>
+		  <li>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Dagoth_ProjectileToxicBolt</defaultProjectile>
+			<warmupTime>1.0</warmupTime>
+			<range>36.9</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Shot_ChargeBlaster</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="Dagoth_BaseProjectile">
+		<defName>Dagoth_ProjectileToxicBolt</defName>
+		<projectile>
+		  <damageDef>Dagoth_DamageToxicBolt</damageDef>
+		  <damageAmountBase>18</damageAmountBase>
+		  <stoppingPower>1.5</stoppingPower>
+		  <speed>70</speed>
+		</projectile>
+		<graphicData>
+		  <texPath>Things/Projectile/Charge_Small_Recolourable</texPath>
+		  <color>(103,22,66)</color>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="Dagoth_BaseMagic_Bolt">
+		<defName>Dagoth_FrostBolt</defName>
+		<label>frost bolt sigil</label>
+		<description>A weapon of unknown origin, possibly Dwemer, or something even more ancient. Creates a fast moving projectile when activated. The projectile releases intense cold upon impact, burning its target and causing hypothermia buildup.</description>
+		<verbs>
+		  <li>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Dagoth_ProjectileFrostBolt</defaultProjectile>
+			<warmupTime>1.0</warmupTime>
+			<range>36.9</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Shot_ChargeBlaster</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="Dagoth_BaseProjectile">
+		<defName>Dagoth_ProjectileFrostBolt</defName>
+		<projectile>
+		  <damageDef>Dagoth_DamageFrostBolt</damageDef>
+		  <damageAmountBase>18</damageAmountBase>
+		  <stoppingPower>1.5</stoppingPower>
+		  <speed>70</speed>
+		</projectile>
+		<graphicData>
+		  <texPath>Things/Projectile/Charge_Small_Recolourable</texPath>
+		  <color>(222,239,253)</color>
+		</graphicData>
+	</ThingDef>
+
+</Defs>

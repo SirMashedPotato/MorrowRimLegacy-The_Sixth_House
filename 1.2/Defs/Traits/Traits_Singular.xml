@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TraitDef>
+    <defName>MorrowRim_TouchedByDagothUr</defName>
+    <commonality>0.4</commonality>
+    <degreeDatas>
+      <li>
+        <label>touched by Dagoth Ur</label>
+        <description>In a dream [PAWN_nameDef] was greeted by the god of the Sixth House. Ever since then the bells of the Sixth House quitely ring in [PAWN_possessive] ears.</description>
+		<statOffsets>
+          <PsychicSensitivity>0.4</PsychicSensitivity>
+		</statOffsets>
+	  </li>
+    </degreeDatas>
+  </TraitDef>
+ 
+</Defs>

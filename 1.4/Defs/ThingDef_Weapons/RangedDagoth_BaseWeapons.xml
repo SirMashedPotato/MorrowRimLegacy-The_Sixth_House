@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- === Bases === -->
+
+	<ThingDef Name="Dagoth_BaseMagic" Abstract="True" ParentName="BaseGun">		
+		<statBases>
+		  <MaxHitPoints>10</MaxHitPoints>
+		  <Flammability>0</Flammability>
+		  <Mass>0.5</Mass>
+		  <AccuracyTouch>0.18</AccuracyTouch>
+		  <AccuracyShort>0.26</AccuracyShort>
+		  <AccuracyMedium>0.26</AccuracyMedium>
+		  <AccuracyLong>0.18</AccuracyLong>
+		  <RangedWeapon_Cooldown>3.4</RangedWeapon_Cooldown>
+		</statBases>
+		<smeltable>false</smeltable>
+		<techLevel>Medieval</techLevel>
+		<tradeability>Sellable</tradeability>
+		<thingCategories>
+		  <li>Artifacts</li>
+		</thingCategories>
+		<tradeTags>
+		  <li>Artifact</li>
+		</tradeTags>
+		<stackLimit>1</stackLimit>
+		<!--<equippedAngleOffset>-90</equippedAngleOffset>-->
+		<!--<destroyOnDrop>true</destroyOnDrop>-->
+	</ThingDef>
+	
+	<!-- basic, single use -->
+	<ThingDef Name="Dagoth_BaseMagic_Single" Abstract="True" ParentName="Dagoth_BaseMagic">	
+		<graphicData>
+			  <texPath>MorrowRim/Dagoth/DagothWeapon_HeartHeal</texPath>
+			  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<weaponTags>
+		  <li>Dagoth_BasicWeaponMagic</li>
+		</weaponTags>
+	</ThingDef>
+	
+	<ThingDef Name="Dagoth_BaseMagic_AdvancedSingle" Abstract="True" ParentName="Dagoth_BaseMagic_Single">	
+		<statBases>
+			<MarketValue>550</MarketValue>
+		</statBases>
+	</ThingDef>
+	
+	<!-- advanced -->
+	
+	<ThingDef Name="Dagoth_BaseMagic_NonSingle" Abstract="True" ParentName="Dagoth_BaseMagic">	
+		<graphicData>
+			  <texPath>MorrowRim/Dagoth/DagothWeapon_HeartFire</texPath>
+			  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1500</MarketValue>
+		</statBases>
+		<weaponTags>
+		  <li>Dagoth_AdvancedWeaponMagic</li>
+		</weaponTags>
+		<thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef Name="Dagoth_BaseMagic_AdvancedNonSingle" Abstract="True" ParentName="Dagoth_BaseMagic_NonSingle">	
+		<statBases>
+			<MarketValue>1700</MarketValue>
+		</statBases>
+	</ThingDef>
+	
+	<!-- godly -->
+	
+	<ThingDef Name="Dagoth_BaseMagic_Rare" Abstract="True" ParentName="Dagoth_BaseMagic">	
+		<graphicData>
+			  <texPath>MorrowRim/Dagoth/DagothWeapon_HeartThrum</texPath>
+			  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+		</statBases>
+		<weaponTags>
+		  <li>Dagoth_AdvancedWeaponMagic</li>
+		  <li>Dagoth_GodlyWeaponMagic</li>
+		</weaponTags>
+		<thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+	</ThingDef>
+
+</Defs>

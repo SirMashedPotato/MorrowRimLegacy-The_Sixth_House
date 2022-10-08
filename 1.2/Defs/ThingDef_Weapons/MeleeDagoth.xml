@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ThingDef ParentName="BaseWeapon">
+    <defName>Dagoth_BellHammer</defName>
+    <label>Sixth House Bell Hammer</label>
+    <description>A large hammer created by the Sixth House. Primarily used for ringing bells, though it is also rather efficient at smashing in skulls. Worth a reasonable amount of silver due to its status as a collectors item.</description>
+    <graphicData>
+      <texPath>MorrowRim/Dagoth/DagothWeapon_BellHammer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Medieval</techLevel>
+	<tradeability>Sellable</tradeability>
+    <statBases>
+      <Mass>2.25</Mass>
+	  <MarketValue>500</MarketValue>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>20.7</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+	<weaponTags>
+		<li>Dagoth_BasicWeaponMelee</li>
+	</weaponTags>
+	<comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+	</comps>
+	<thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+  </ThingDef>
+
+</Defs>

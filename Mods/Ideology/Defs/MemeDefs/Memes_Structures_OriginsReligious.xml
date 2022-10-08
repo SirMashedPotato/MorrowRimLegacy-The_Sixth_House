@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<MemeDef>
+		<defName>MorrowRim_Structure_OriginDagothUr</defName>
+		<label>Dagoth origin</label>
+		<description>This is a variant of the embodied theist structure. This ideoligion is a descendant of the Cult of Dagoth Ur. It may have very different precepts than those of thousands of years ago, but its symbols are similar.</description>
+		<category>Structure</category>
+		<iconPath>UI/SixthHouseSettlementAlt</iconPath>
+		<impact>0</impact>
+		<worshipRoomLabel>shrine</worshipRoomLabel>
+		<deityCount>1</deityCount>
+		<deityNameMakerOverride>MorrowRim_NamerSixthHouseGod</deityNameMakerOverride>
+		<deityTypeMakerOverride>MorrowRim_NamerSixthHouseGodType</deityTypeMakerOverride>
+		<generalRules>
+		  <rulesStrings>
+			<li>memeCreed->sect</li>
+			<li>memeCreed->cult</li>
+			<li>memeCreed->temple</li>
+			<li>memeCreed->faith</li>
+			<li>memeHyphenPrefix->theo</li>
+			<li>memeConcept->creation</li>
+			<li>memeConcept->life</li>
+			<li>memeLeaderNoun->councilor</li>
+			<li>memeLeaderAdjective->divine</li>
+			<li>memeMoralist->priest</li>
+			<li>memeMoralist->cleric</li>
+		  </rulesStrings>
+		</generalRules>
+		<descriptionMaker>
+		  <patterns>
+			<li><def>TheistMyth</def></li>
+			<li><def>TheistFounder</def></li>
+		  </patterns>
+		  <constants>
+			<li><key>structure_theist</key><value>true</value></li>
+			<li><key>MorrowRim_Structure_OriginDagothUr</key><value>true</value></li>
+		  </constants>
+		</descriptionMaker>
+		<symbolPacks>
+		  <li>
+			<ideoName>Spiritism</ideoName>
+			<theme>spiritualism</theme>
+			<adjective>spiritual</adjective>
+			<member>spiritist</member>
+		  </li>
+		  <li>
+			<ideoName>Faith</ideoName>
+			<theme>faith</theme>
+			<adjective>faithful</adjective>
+			<member>faithholder</member>
+		  </li>
+		</symbolPacks>
+		<thingStyleCategories>
+		  <li>
+			<category>MorrowRim_DagothUrStyle</category>
+			<priority>4</priority>
+		  </li>
+		</thingStyleCategories>
+	</MemeDef>
+
+</Defs>

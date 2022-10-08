@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StyleCategoryDef>
+    <defName>MorrowRim_DagothUrStyle</defName>
+    <label>Dagoth Ur</label>
+    <iconPath>UI/SixthHouseSettlement</iconPath>
+	<!--
+    <soundOngoingRitual>RitualSustainer_Hindu</soundOngoingRitual>
+    <ritualVisualEffectDef>Hindu</ritualVisualEffectDef>
+	-->
+    <thingDefStyles>
+
+    </thingDefStyles>
+  </StyleCategoryDef>
+
+</Defs>

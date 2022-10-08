@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--
+	<IncidentDef>
+		<defName>Dagoth_SweetDreams</defName>
+		<label>peaceful dreams</label>
+		<category>Dagoth_Dream</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<letterText>Your {0} are subjected to nothing but a peaceful sleep.</letterText>
+		<letterDef>PositiveEvent</letterDef>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_SweetDreams</workerClass>
+		<baseChance>1.0</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<earliestDay>0</earliestDay>
+	</IncidentDef>
+	-->
+	<IncidentDef>
+		<defName>Dagoth_DisturbedSleep</defName>
+		<label>disturbed sleep</label>
+		<category>Dagoth_Dream</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<diseaseVictimFractionRange>0.2~0.5</diseaseVictimFractionRange>
+		<letterText>{0} of your {1} have had a disturbing dream.\n\n{2}\n\nThey have been affected by the dream, this will pass over time.\n\nThe following {1} had the dream:\n\n{3}</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_DisturbedSleep</workerClass>
+		<baseChance>1.0</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<earliestDay>0</earliestDay>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>Dagoth_SleepersAwake</defName>
+		<label>sleepers awake</label>
+		<category>Dagoth_Dream</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<diseaseVictimFractionRange>0.2~0.5</diseaseVictimFractionRange>
+		<letterText>{0} of your {1} have been called to action by Dagoth Ur, and have now begun their pilgrimage to the source of the call, leaving behind their old friends and family.\n\n{2}\n\nThe following {1} have answered the call:\n\n{3}</letterText>
+		<letterDef>ThreatSmall</letterDef>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_SleepersAwake</workerClass>
+		<baseChance>0.3</baseChance>
+		<minRefireDays>8</minRefireDays>
+		<earliestDay>13</earliestDay>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>Dagoth_SleepersRise</defName>
+		<label>sleepers rise</label>
+		<category>Dagoth_Dream</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<diseaseVictimFractionRange>0.2~0.5</diseaseVictimFractionRange>
+		<letterText>{0} of your {1} have been called to action by Dagoth Ur, and have now taken up arms against your colony, their old friends and family.\n\n{2}\n\nThe following {1} have answered the call:\n\n{3}</letterText>
+		<letterDef>ThreatBig</letterDef>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_SleepersRise</workerClass>
+		<baseChance>0.2</baseChance>
+		<minRefireDays>8</minRefireDays>
+		<earliestDay>15</earliestDay>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>Dagoth_InterruptedSleep</defName>
+		<label>interrupted sleep</label>
+		<category>Dagoth_Dream</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<diseaseVictimFractionRange>0.2~0.5</diseaseVictimFractionRange>
+		<letterText>Feeling a strange presence in the air during their slumber, {0} of your {1} have awoken to a servant of Dagoth Ur standing before them.\n\n{2}\n\nThe following {1} have an unexpected visitor:\n\n{3}</letterText>
+		<letterDef>ThreatBig</letterDef>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_InterruptedSleep</workerClass>
+		<baseChance>0.3</baseChance>
+		<minRefireDays>5</minRefireDays>
+		<earliestDay>10</earliestDay>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>Dagoth_SleepParalysis</defName>
+		<label>sleep paralysis</label>
+		<category>Dagoth_Dream</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<diseaseVictimFractionRange>0.2~0.2</diseaseVictimFractionRange>
+		<letterText>After being disturbed from a terrifying dream, {0} of your {1} have awoken from their slumber, completely unable to move.\n\n{2}\n\nThe following {1} are paralyzed:\n\n{3}</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_SleepParalysis</workerClass>
+		<baseChance>0.6</baseChance>
+		<minRefireDays>2</minRefireDays>
+		<earliestDay>3</earliestDay>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>Dagoth_ReturnToAsh</defName>
+		<label>return to ash</label>
+		<category>Dagoth_Dream</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<diseaseVictimFractionRange>0.2~0.2</diseaseVictimFractionRange>
+		<letterText>After awakening from a threatening dream, {0} of your {1} have found out that they are on fire.\n\n{2}\n\nThe following {1} are on fire:\n\n{3}</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_ReturnToAsh</workerClass>
+		<baseChance>0.5</baseChance>
+		<minRefireDays>2</minRefireDays>
+		<earliestDay>3</earliestDay>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>Dagoth_FleshRemade</defName>
+		<label>flesh remade</label>
+		<category>Dagoth_Dream</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<diseaseVictimFractionRange>0.2~0.5</diseaseVictimFractionRange>
+		<letterText>{0} of your {1} have had a horrific dream.\n\n{2}\n\nThey have become afflicted with corprus.\n\nEnsure you have a medical bed and a doctor. Make sure that they get proper treatment and spend as much time in bed as possible.\n\nThe following {1} have become afflicted with corprus:\n\n{3}</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_FleshRemade</workerClass>
+		<baseChance>0.3</baseChance>
+		<minRefireDays>10</minRefireDays>
+		<earliestDay>10</earliestDay>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>Dagoth_TheLeftovers</defName>
+		<label>the leftovers</label>
+		<category>Dagoth_Dream</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<diseaseVictimFractionRange>0.02~0.02</diseaseVictimFractionRange>
+		<letterText>{0} of your {1} have suddenly disappeared in their sleep.\n\n{2}\n\nThe following {1} have disappeared:\n\n{3}</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_Disappearance</workerClass>
+		<baseChance>0.1</baseChance>
+		<minRefireDays>10</minRefireDays>
+		<earliestDay>12</earliestDay>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>Dagoth_DreamerWakes</defName>
+		<label>dreamer wakes</label>
+		<category>Dagoth_Dream</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<diseaseVictimFractionRange>0.2~0.2</diseaseVictimFractionRange>
+		<letterText>{0} of your {1} have awoken from a strange dream, though remain in a dream-like state.\n\n{2}\n\nThe following {1} are experiencing a mental break:\n\n{3}</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_DreamerWakes</workerClass>
+		<baseChance>0.3</baseChance>
+		<minRefireDays>5</minRefireDays>
+		<earliestDay>5</earliestDay>
+	</IncidentDef>
+
+</Defs>

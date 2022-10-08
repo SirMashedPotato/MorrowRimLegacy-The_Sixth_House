@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<BodyPartGroupDef>
+		<defName>Dagoth_ProboscisAttackTool</defName>
+		<label>proboscis</label>
+	</BodyPartGroupDef>
+	
+	<BodyPartGroupDef>
+		<defName>Dagoth_TrunkAttackTool</defName>
+		<label>trunk</label>
+	</BodyPartGroupDef>
+	
+	<BodyPartGroupDef>
+		<defName>Dagoth_ThirdEyeAttackTool</defName>
+		<label>third eye</label>
+	</BodyPartGroupDef>
+
+</Defs>

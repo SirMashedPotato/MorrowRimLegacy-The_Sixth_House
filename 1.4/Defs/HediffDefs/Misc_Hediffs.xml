@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef>
+		<defName>Dagoth_SleepParalysis</defName>
+		<label>sleep paralysis</label>
+		<description>Prevents movement entirely, but passes within a few moments. Sleep paralysis is most often caused by the mind waking sooner than expected, and is often accompanied by feeling a presence nearby.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.6, 0.4)</defaultLabelColor>
+		<maxSeverity>1</maxSeverity>
+		<stages>
+		<li>
+		<capMods>
+			<li>
+				<capacity>Manipulation</capacity>
+				<setMax>0.01</setMax>
+			</li>
+			<li>
+				<capacity>Moving</capacity>
+				<setMax>0.01</setMax>
+			</li>
+			<li>
+				<capacity>Talking</capacity>
+				<setMax>0.01</setMax>
+			</li>
+			<li>
+				<capacity>Eating</capacity>
+				<setMax>0.01</setMax>	
+			</li>
+		</capMods>
+		</li>
+		</stages>
+		<comps>
+		  <li Class="HediffCompProperties_SelfHeal">
+			<healAmount>0.004</healAmount>
+		  </li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>Dagoth_IntensePain</defName>
+		<label>intense pain</label>
+		<description>Intense pain caused by gazing into an ash vampires third eye. Will wear off after a while.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.6, 0.4)</defaultLabelColor>
+		<maxSeverity>1</maxSeverity>
+		<stages>
+			<li>
+				<painOffset>0.70</painOffset>
+			</li>
+		</stages>
+		<comps>
+		  <li Class="HediffCompProperties_SelfHeal">
+			<healAmount>0.02</healAmount>
+		  </li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>Dagoth_DisturbedSleep</defName>
+		<label>disturbed sleep</label>
+		<description>The result of an unnaturaly disturbed sleep, caused by a disturbing dream, will pass over time.\n\nInstances such as these were once linked to the return of the Sixth House. The dreams were reported to often contain a large figure in a golden mask, greeting the dreamer as one greets an old friend. The recorded number of these dreams greatly decreased after the Nerevarine reborne defeated Dagoth Ur at Red Mountain.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.6, 0.4)</defaultLabelColor>
+		<maxSeverity>1</maxSeverity>
+		<stages>
+			<li>
+				<restFallFactorOffset>1</restFallFactorOffset>
+				<capMods>
+				  <li>
+					<capacity>Consciousness</capacity>
+					<offset>-0.1</offset>
+				  </li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+		  <li Class="HediffCompProperties_SelfHeal">
+			<healAmount>0.002</healAmount>
+		  </li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>Dagoth_Dreamer</defName>
+		<label>dream of the Sharmat</label>
+		<description>The result of an unnaturaly disturbed sleep, caused by an enlightening dream, will pass over time.\n\nMany reported having disturbing dreams during the return of the Sixth House. Only a few described these dreams as enlightening. The mental state of these individuals slowly deteriorated, constantly rambling about how they are the only ones truly awake. Eventually they turned on their friends and family, and fled to Red Mountain.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.4, 0.6, 0.8)</defaultLabelColor>
+		<maxSeverity>1</maxSeverity>
+		<stages>
+			<li>
+				<restFallFactorOffset>1</restFallFactorOffset>
+				<capMods>
+				  <li>
+					<capacity>Consciousness</capacity>
+					<offset>0.1</offset>
+				  </li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+		  <li Class="HediffCompProperties_SelfHeal">
+			<healAmount>0.002</healAmount>
+		  </li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>Dagoth_HiddenTouched</defName>
+		<label>hidden touched</label>
+		<description>Used for Achievements, because I am being lazy.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.6, 0.4)</defaultLabelColor>
+		<maxSeverity>1</maxSeverity>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+		<comps>
+		  <li Class="HediffCompProperties_SelfHeal">
+			<healAmount>1</healAmount>
+		  </li>
+		</comps>
+	</HediffDef>
+	
+	<!-- divine gifts -->
+	
+	<HediffDef ParentName="ChronicDiseaseBase">
+		<defName>Dagoth_GiftOfDagothUr_Flesh</defName>
+		<label>gift of divine flesh</label>
+		<description>Divine flesh, a gift from Dagoth Ur to an elite member of the Sixth House. Greatly nullifies all pain, allowing those with the gift to ignore even the most serious of wounds.</description>
+		<makesSickThought>false</makesSickThought>
+		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
+		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<stages>
+			<li>
+				<painOffset>-5</painOffset>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ChronicDiseaseBase">
+		<defName>Dagoth_GiftOfDagothUr_Strength</defName>
+		<label>gift of divine strength</label>
+		<description>Divine strength, a gift from Dagoth Ur to an elite member of the Sixth House. Greatly increases strength, allowing those with the gift to shatter even the strongest of steel.</description>
+		<makesSickThought>false</makesSickThought>
+		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
+		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<stages>
+			<li>
+				<capMods>
+				  <li>
+					<capacity>Manipulation</capacity>
+					<offset>0.5</offset>
+				  </li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ChronicDiseaseBase">
+		<defName>Dagoth_GiftOfDagothUr_Speed</defName>
+		<label>gift of divine speed</label>
+		<description>Divine speed, a gift from Dagoth Ur to an elite member of the Sixth House. Greatly increases movement speed, allowing those with the gift to outrun even the fastest of projectiles.</description>
+		<makesSickThought>false</makesSickThought>
+		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
+		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<stages>
+			<li>
+				<capMods>
+				  <li>
+					<capacity>Moving</capacity>
+					<offset>0.5</offset>
+				  </li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ChronicDiseaseBase">
+		<defName>Dagoth_GiftOfDagothUr_Sight</defName>
+		<label>gift of divine sight</label>
+		<description>Divine sight, a gift from Dagoth Ur to an elite member of the Sixth House. Greatly increases perception, allowing those with the gift to glimpse that which lies beyond the dream.</description>
+		<makesSickThought>false</makesSickThought>
+		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
+		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<stages>
+			<li>
+				<capMods>
+				  <li>
+					<capacity>Sight</capacity>
+					<offset>0.5</offset>
+				  </li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	  
+</Defs>

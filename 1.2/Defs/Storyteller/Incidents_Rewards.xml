@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--
+	<IncidentDef>
+		<defName>Dagoth_RewardBlightSettlementClaimed</defName>
+		<label>settlement claimed</label>
+		<category>Dagoth_Blight</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<letterText>Word has reached your colony that {0} have seized control of {1} from {2}. Remember, you asked for this.</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<workerClass>MorrowRim_Dagoth.IncidentWorkerReward_SettlementClaimed</workerClass>
+		<baseChance>0.0</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<earliestDay>0</earliestDay>
+	</IncidentDef>
+	-->
+	
+	<IncidentDef>
+		<defName>Dagoth_RewardVolcanicWinter</defName>
+		<label>volcanic winter</label>
+		<category>Dagoth_Blight</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>VolcanicWinter</gameCondition>
+		<letterLabel>Volcanic winter</letterLabel>
+		<letterDef>ThreatSmall</letterDef>
+		<baseChance>0.0</baseChance>
+		<earliestDay>0</earliestDay>
+		<minRefireDays>0</minRefireDays>
+		<minDifficulty>0</minDifficulty>
+		<durationDays>7.5~40</durationDays>
+		<tale>VolcanicWinter</tale>
+	</IncidentDef>
+	
+	<IncidentDef ParentName="DiseaseIncident">
+		<defName>MorrowRim_RewardDisease_Corprus</defName>
+		<label>corprus</label>
+		<diseaseIncident>MorrowRim_Corprus</diseaseIncident>
+		<letterLabel>Disease: Corprus</letterLabel>
+	</IncidentDef>
+
+</Defs>

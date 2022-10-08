@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="Dagoth_BasePawn">
+		<defName>Dagoth_Ascended</defName>
+		<label>ascended sleeper</label>
+		<description>The final form of ascension, caused by the divine disease, corprus. The ascended sleepers face has reformed into a twisted mass of bone and flesh, a perversion of everything human. Trunks have sprouted in place of a mouth, capable of filling the air with blighted ash, inflicting a variety of blight diseases.</description>
+		<uiIconScale>1.35</uiIconScale>
+		<statBases>
+		  <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.12</ArmorRating_Sharp>
+		  <MoveSpeed>2.6</MoveSpeed>
+		</statBases>
+	    <tools>
+		  <li>
+			<label>left fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			  <li>Scratch</li>
+			</capacities>
+			<power>5.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+			<chanceFactor>0.7</chanceFactor>
+		  </li>
+		  <li>
+			<label>right fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			  <li>Scratch</li>
+			</capacities>
+			<power>5.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+			<chanceFactor>0.7</chanceFactor>
+		  </li>
+		  
+		  <!-- special breaths -->
+		  <li>
+			<label>paralysing breath</label>
+			<capacities>
+			  <li>Dagoth_ParalyticBreath</li>
+			</capacities>
+			<power>3.3</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Dagoth_TrunkAttackTool</linkedBodyPartsGroup> <!-- change to trunks -->
+			<chanceFactor>0.3</chanceFactor>
+		  </li>
+		  <li>
+			<label>igniting breath</label>
+			<capacities>
+			  <li>Dagoth_FireBite</li>
+			</capacities>
+			<power>3.3</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Dagoth_TrunkAttackTool</linkedBodyPartsGroup> <!-- change to trunks -->
+			<chanceFactor>0.3</chanceFactor>
+		  </li>
+		  <!-- blight breaths -->
+		  <li>
+			<label>ash-chancre blight breath</label>
+			<capacities>
+			  <li>Dagoth_Blight_AshChancre</li>
+			</capacities>
+			<power>3.3</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Dagoth_TrunkAttackTool</linkedBodyPartsGroup> <!-- change to trunks -->
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		  <li>
+			<label>ash-woe blight breath</label>
+			<capacities>
+			  <li>Dagoth_Blight_AshWoe</li>
+			</capacities>
+			<power>3.3</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Dagoth_TrunkAttackTool</linkedBodyPartsGroup> <!-- change to trunks -->
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		  <li>
+			<label>black-heart blight breath</label>
+			<capacities>
+			  <li>Dagoth_Blight_BlackHeart</li>
+			</capacities>
+			<power>3.3</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Dagoth_TrunkAttackTool</linkedBodyPartsGroup> <!-- change to trunks -->
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		  <li>
+			<label>chantrax blight breath</label>
+			<capacities>
+			  <li>Dagoth_Blight_Chanthrax</li>
+			</capacities>
+			<power>3.3</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Dagoth_TrunkAttackTool</linkedBodyPartsGroup> <!-- change to trunks -->
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		  <!-- /special breaths -->
+		  
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.1</chanceFactor>
+		  </li>
+		</tools>
+		<race>
+			<body>Dagoth_HumanlikeAscended</body>
+			<baseBodySize>1.1</baseBodySize>
+			<baseHealthScale>3.0</baseHealthScale>
+			<lifeStageAges>
+				<li>
+				  <def>HumanlikeAdult</def>
+				  <minAge>0</minAge>
+				</li>
+			</lifeStageAges>
+		</race>
+		<comps>
+			<li Class="MorrowRim_Dagoth.CompProperties_GiftedSpawnInit">
+			<chance>0.5</chance>
+			</li>
+		</comps>
+	</ThingDef>
+	  
+	<PawnKindDef Name="Dagoth_Ascended">
+		<defName>Dagoth_Ascended</defName>
+		<label>ascended sleeper</label>
+		<race>Dagoth_Ascended</race>
+		<combatPower>150</combatPower>
+		<defaultFactionType>MorrowRim_SixthHouse</defaultFactionType>
+		<aiAvoidCover>true</aiAvoidCover>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>MorrowRim/Dagoth/Ascended/Ascended</texPath>
+			  <drawSize>1.5</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>MorrowRim/Dagoth/Ascended/Dessicated_Ascended</texPath>
+			  <drawSize>1.5</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+		<weaponMoney>1500~2000</weaponMoney>
+		<weaponTags>
+		  <li>Dagoth_AdvancedWeaponMagic</li>
+		</weaponTags>
+	</PawnKindDef>
+
+</Defs>

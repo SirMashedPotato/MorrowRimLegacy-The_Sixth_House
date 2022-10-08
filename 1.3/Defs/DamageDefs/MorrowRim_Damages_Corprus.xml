@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Corprus damages -->
+	
+	<DamageDef ParentName="Bite">
+		<defName>MorrowRim_CorprusBite</defName>
+		<label>corprus infected bite</label>
+		<workerClass>MorrowRim_Dagoth.DamageWorker_CorprusBite</workerClass>
+	</DamageDef>
+	
+	<DamageDef ParentName="Scratch">
+		<defName>MorrowRim_CorprusScratch</defName>
+		<label>corprus infected scratch</label>
+		<workerClass>MorrowRim_Dagoth.DamageWorker_CorprusScratch</workerClass>
+	</DamageDef>
+	
+</Defs>

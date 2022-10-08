@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Expanded Framework</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<!-- Add defs -->
+				
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs</xpath>
+					<value>
+					
+						<!--  -->
+					
+						<!--StructureLayoutDef -->
+						
+						<!--SettlementLayoutDef -->
+						
+						<KCSG.SettlementLayoutDef>
+							<defName>Dagoth_SixthHouse_Settlement_1</defName>
+							<gridSize>(57,57)</gridSize>
+							<settlementSize>(57,57)</settlementSize>
+							<vanillaLikeDefense>false</vanillaLikeDefense>
+							<path>false</path>
+							<clearEverything>false</clearEverything>
+							<roomLayout>
+								<li>Dagoth_SixthHouseSettlement1</li>
+							</roomLayout>
+						</KCSG.SettlementLayoutDef>
+
+					</value>
+				</li>
+				
+				<!-- Add to faction -->
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/FactionDef[defName="MorrowRim_SixthHouse"]</xpath>
+					<value>
+						<li Class="KCSG.FactionSettlement">
+							<chooseFrom>
+								<li>Dagoth_SixthHouse_Settlement_1</li>
+							</chooseFrom>
+						</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

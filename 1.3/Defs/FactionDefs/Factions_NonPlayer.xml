@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef>
+		<defName>MorrowRim_SixthHouse</defName>
+		<label>The Sixth House of Dagoth Ur</label>
+		<pawnSingular>cultist of the sixth house</pawnSingular>
+		<pawnsPlural>cultists of the sixth house</pawnsPlural>
+		<description>A collection of cultists, worshippers of Dagoth Ur. Dagoth Ur has long been thought dead, defeated at Red Mountain by the Nerevarine. The reappearance of the Sixth House indicates this may not have been the case.\n\nWhile the Sixth House remains active they will spread their madness, in the forms of dreams, blight and corruption*.\n\n*Requires the Dagoth Ur storyteller to be active.</description>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<maxCountAtGameStart>1</maxCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>
+		<settlementGenerationWeight>0.4</settlementGenerationWeight>
+		<factionIconPath>UI/SixthHouseSettlement</factionIconPath>
+		<factionNameMaker>MorrowRim_NamerFactionSixthHouse</factionNameMaker>
+		<settlementNameMaker>MorrowRim_NamerSettlementSixthHouse</settlementNameMaker>
+		<raidCommonalityFromPointsCurve>
+		  <points>
+			<li>(300,  0)</li>
+			<li>(700,  1)</li>
+			<li>(1400, 1.8)</li>
+			<li>(2800, 2.2)</li>
+			<li>(4000, 2.6)</li>
+		  </points>
+		</raidCommonalityFromPointsCurve>
+		<raidLootValueFromPointsCurve>
+		  <points>
+			<li>(0, 0)</li>
+		  </points>
+		</raidLootValueFromPointsCurve>
+		<humanlikeFaction>true</humanlikeFaction>
+		<hidden>false</hidden>
+		<autoFlee>false</autoFlee>
+		<canUseAvoidGrid>true</canUseAvoidGrid>
+		<techLevel>Neolithic</techLevel>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<allowedArrivalTemperatureRange>-15~65</allowedArrivalTemperatureRange>
+		
+		<!-- for dreamers -->
+		<backstoryFilters>
+		  <li>
+			<categories>
+			  <li>Tribal</li>
+			</categories>
+		  </li>
+		</backstoryFilters>
+		<!-- for Ideo -->
+		<allowedCultures>
+			<li>Corunan</li>
+		</allowedCultures>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Proselytizer</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+		</requiredMemes>
+		<structureMemeWeights>
+		  <MorrowRim_Structure_OriginDagothUr MayRequire="Ludeon.RimWorld.Ideology">8</MorrowRim_Structure_OriginDagothUr>
+		</structureMemeWeights>
+		<!-- -->
+		<colorSpectrum>
+		  <li>(0.7, 0.0, 0.0)</li>
+		</colorSpectrum>
+		<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+		<earliestRaidDays>20</earliestRaidDays>
+		<permanentEnemy>true</permanentEnemy>
+		
+		<maxPawnCostPerTotalPointsCurve>
+		  <points>
+			<li>(0,35)</li>
+			<li>(70, 50)</li>
+			<li>(800, 100)</li>
+			<li>(1300, 150)</li>
+			<li>(100000, 10000)</li>
+		  </points>
+		</maxPawnCostPerTotalPointsCurve>
+		
+		<pawnGroupMakers>
+		  <li>
+			<!-- Dreamers raid-->
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<options>
+			  <Dagoth_TribalDreamer>10</Dagoth_TribalDreamer>
+			</options>
+		  </li>
+		  <li>
+			<!-- Ranged only -->
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<options>
+			  <Dagoth_Slave>10</Dagoth_Slave>
+			  <Dagoth_Ghoul>5</Dagoth_Ghoul>
+			  <Dagoth_Ascended>1</Dagoth_Ascended>
+			</options>
+		  </li>
+		  <li>
+			<!-- Melee only-->
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<options>
+			  <Dagoth_Zombie>10</Dagoth_Zombie>
+			  <Dagoth_TribalDreamer>8</Dagoth_TribalDreamer>
+			  <Dagoth_Vampire>1</Dagoth_Vampire>
+			</options>
+		  </li>
+		  <li>
+			<!-- Elite -->
+			<kindDef>Combat</kindDef>
+			<commonality>40</commonality>
+			<options>
+			  <Dagoth_Vampire>3</Dagoth_Vampire>
+			  <Dagoth_Ascended>5</Dagoth_Ascended>
+			  <Dagoth_Zombie>10</Dagoth_Zombie>
+			</options>
+		  </li>
+		  <li>
+			<!-- corprus -->
+			<kindDef>Combat</kindDef>
+			<commonality>50</commonality>
+			<options>
+			  <Dagoth_Ghoul>2</Dagoth_Ghoul>
+			  <Dagoth_Ascended>1</Dagoth_Ascended>
+			  <MorrowRim_CorprusStalker>10</MorrowRim_CorprusStalker>
+			  <MorrowRim_CorprusLame>5</MorrowRim_CorprusLame>
+			  <MorrowRim_CorprusBloated>5</MorrowRim_CorprusBloated>
+			</options>
+		  </li>
+		  <!-- trader -->
+		  
+		  <!-- settlements -->
+		  <!-- converted -->
+		  <li>
+			<kindDef>Settlement</kindDef>
+			<commonality>90</commonality>
+			<options>
+			  <Dagoth_TribalDreamer>10</Dagoth_TribalDreamer>
+			  <Dagoth_Zombie>8</Dagoth_Zombie>
+			  <Dagoth_Ghoul>4</Dagoth_Ghoul>
+			</options>
+		  </li>
+		  <!-- stronghold -->
+		  <li>
+			<kindDef>Settlement</kindDef>
+			<commonality>80</commonality>
+			<options>
+			  <Dagoth_Slave>10</Dagoth_Slave>
+			  <Dagoth_Zombie>10</Dagoth_Zombie>
+			  <Dagoth_Ghoul>6</Dagoth_Ghoul>
+			  <Dagoth_Vampire>1</Dagoth_Vampire>
+			  <Dagoth_Ascended>2</Dagoth_Ascended>
+			</options>
+		  </li>
+		  <!-- corprus site -->
+		  <li>
+			<kindDef>Settlement</kindDef>
+			<commonality>50</commonality>
+			<options>
+			  <Dagoth_Ghoul>2</Dagoth_Ghoul>
+			  <Dagoth_Ascended>1</Dagoth_Ascended>
+			  <MorrowRim_CorprusStalker>10</MorrowRim_CorprusStalker>
+			  <MorrowRim_CorprusLame>5</MorrowRim_CorprusLame>
+			  <MorrowRim_CorprusBloated>5</MorrowRim_CorprusBloated>
+			</options>
+		  </li>
+		  
+		</pawnGroupMakers>
+	</FactionDef>
+
+</Defs>

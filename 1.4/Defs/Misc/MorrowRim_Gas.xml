@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="Dagoth_Gas_Base">
+    <defName>Gas_Corprus</defName>
+	<thingClass>MorrowRim_Dagoth.Gas_Corprus</thingClass>
+    <label>corprus infused ash cloud</label>
+    <graphicData>
+	  <color>(80,40,40,50)</color>
+    </graphicData>
+  </ThingDef>
+    
+</Defs>

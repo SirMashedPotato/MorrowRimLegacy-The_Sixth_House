@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>Dagoth_BlightBeGone</defName>
+    <label>Divayth's delight</label>
+    <description>Ash salts processed in a specific way, used to prevent blight diseases taking hold. Blocks ash-chancre, ash-woe, black-heart and chanthrax, and slows down corprus infection. Must be taken every five days to remain effective.\n\nThis drug only prevents new infections. It does not cure existing infections - even those that are not yet discovered.\n\nOriginally created by a Telvanni alchemist in order to provide immunity, and potentially cure, corprus. While it is effective at blocking the lesser ash blights, it sadly only slows corprus infection.\n\nHaving the elixir active in the system seems to neutralize the bodies immune system in such a way that, if one manages to survive corprus, permanent immunity is not achieved.\n\nMay cause mild nausea.\n\nMany slaves were harmed during testing.</description>
+    <descriptionHyperlinks><HediffDef>Dagoth_BlightBeGoneHigh</HediffDef></descriptionHyperlinks>
+    <graphicData>
+      <texPath>MorrowRim/Item/Drug/PotionExclusive</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.80</drawSize>
+    </graphicData>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+	<stackLimit>75</stackLimit>
+    <statBases>
+      <WorkToMake>600</WorkToMake>
+      <MarketValue>64</MarketValue>
+      <Mass>0.005</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>Dagoth_BlightBeGoneHigh</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>Dagoth_BlightBeGone</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Dagoth_AshSalts>5</Dagoth_AshSalts>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1000</listOrder>
+        <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>Dagoth_BlightBeGoneHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>Divayth's delight</label>
+    <description>Provides immunity to ash blight diseases, and slows corprus infection. This only blocks new infections; it does nothing for those who are already infected, even if their infection is dormant.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.18</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <vomitMtbDays>5.50</vomitMtbDays>
+          <makeImmuneTo>
+            <li>Dagoth_Blight_AshChancre</li>
+            <li>Dagoth_Blight_AshWoe</li>
+            <li>Dagoth_Blight_BlackHeart</li>
+            <li>Dagoth_Blight_Chanthrax</li>
+          </makeImmuneTo>
+        </li>
+      </stages>
+  </HediffDef>
+  
+</Defs>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseGas">
+    <defName>Gas_Corprus</defName>
+	<thingClass>MorrowRim_Dagoth.Gas_Corprus</thingClass>
+    <label>corprus infused ash cloud</label>
+    <graphicData>
+      <texPath>Things/Gas/Puff</texPath>
+      <drawSize>2.2</drawSize>
+      <!--<color>(1.0,1.0,1.0,0.5)</color>-->
+	  <color>(80,40,40,50)</color>
+    </graphicData>
+    <gas>
+      <expireSeconds>10~16</expireSeconds>
+      <blockTurretTracking>true</blockTurretTracking>
+      <accuracyPenalty>0.7</accuracyPenalty>
+      <rotationSpeed>10</rotationSpeed>
+    </gas>
+  </ThingDef>
+    
+</Defs>

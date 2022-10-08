@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BodyPartDef>
+    <defName>Dagoth_Proboscis</defName>
+    <label>proboscis</label>
+    <hitPoints>50</hitPoints>
+    <frostbiteVulnerability>0.0</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <alive>false</alive>
+    <bleedRate>0</bleedRate>
+    <tags>
+    </tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Dagoth_Trunk</defName>
+    <label>trunk</label>
+    <hitPoints>50</hitPoints>
+    <frostbiteVulnerability>1.5</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <solid>false</solid>
+    <alive>true</alive>
+    <bleedRate>0.4</bleedRate>
+    <tags>
+    </tags>
+  </BodyPartDef>
+
+</Defs>

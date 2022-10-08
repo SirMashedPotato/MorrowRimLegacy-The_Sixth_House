@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="Dagoth_BasePawn">
+		<defName>Dagoth_Zombie</defName>
+		<label>ash zombie</label>
+		<description>A Dunmer with body and mind enslaved to Dagoth Ur. Their face has been removed, leaving nothing but a gaping cavity behind. Some believe it to be a self afflicted wound,that the victim is attempting to claw the pain from out of their head. The more superstitious believe it to be a direct result of the supposed song of the Sixth House, causing their mind to burst from enlightenment.</description>
+		<uiIconScale>1.35</uiIconScale>
+	    <tools>
+		  <li>
+			<label>left fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>8.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>8.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>teeth</label>
+			<capacities>
+			  <li>Bite</li>
+			</capacities>
+			<power>8.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<chanceFactor>0.07</chanceFactor>
+			<soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+			<soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<race>
+		  <body>Dagoth_HumanlikeNoFace</body>
+		  <baseBodySize>1</baseBodySize>
+		  <baseHealthScale>1.25</baseHealthScale>
+		  <lifeStageAges>
+				<li>
+				  <def>HumanlikeAdult</def>
+				  <minAge>0</minAge>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
+	  
+	<PawnKindDef Name="Dagoth_Zombie">
+		<defName>Dagoth_Zombie</defName>
+		<label>ash zombie</label>
+		<race>Dagoth_Zombie</race>
+		<combatPower>80</combatPower>
+		<defaultFactionType>MorrowRim_SixthHouse</defaultFactionType>
+		<aiAvoidCover>true</aiAvoidCover>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>MorrowRim/Dagoth/Zombie/Zombie</texPath>
+			  <drawSize>1.5</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>MorrowRim/Dagoth/Zombie/Dessicated_Zombie</texPath>
+			  <drawSize>1.5</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Corprus damages -->
+	
+	<DamageDef ParentName="Bite">
+		<defName>MorrowRim_CorprusBite</defName>
+		<label>corprus infected bite</label>
+		<additionalHediffs>
+		  <li>
+			<hediff>MorrowRim_Corprus</hediff>
+			<severityPerDamageDealt>0.00005</severityPerDamageDealt>
+			<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+		  </li>
+		</additionalHediffs>
+	</DamageDef>
+	
+	<DamageDef ParentName="Scratch">
+		<defName>MorrowRim_CorprusScratch</defName>
+		<label>corprus infected scratch</label>
+		<additionalHediffs>
+		  <li>
+			<hediff>MorrowRim_Corprus</hediff>
+			<severityPerDamageDealt>0.00001</severityPerDamageDealt>
+			<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+		  </li>
+		</additionalHediffs>
+	</DamageDef>
+	
+</Defs>

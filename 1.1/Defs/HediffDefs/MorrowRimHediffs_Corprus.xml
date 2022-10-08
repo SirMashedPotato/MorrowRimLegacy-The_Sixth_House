@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+	<HediffDef ParentName="InfectionBase">
+		<defName>MorrowRim_Corprus</defName>
+		<label>corprus</label>
+		<description>An infectious disease carried in volcanic ash.\nCorprus begins with a painful skin blight, causing rashes and growths to appear over the victims body. In later stages it spreads into the muscles, causing panful restructuring that leaves the victim stronger than before. In the final stages it spreads to the victims mind. If left untreated corprus will drive its vicims permentantly insane. Doesn't usually infect animals, but can spread to them. Most animals cannot survive fatal levels of infection.\n\nIf one manages to survive corprus they will become immune to subsequent infection.\n\nIn times past corprus was considered to be incurable. Any suspected of being afflicted with the disease were thrown into compounds to live the rest of their days. The problem was victims of corprus seem to live eternally. These compounds very quickly overflowed, leading to the decision to eradicate the disease completely. Sadly a strain of the disease seems to still be present on certain rimworlds, though this strain is considered to be much weaker.\n\nSome believe corprus to be more than an ash-borne disease, and instead a creation of the Sixth House, used to spread its enlightenment to all, even those that wish not to have it.</description>
+		<makesSickThought>true</makesSickThought>
+		<lethalSeverity>1</lethalSeverity>
+		<tendable>true</tendable>
+		<comps>
+		  <li Class="HediffCompProperties_TendDuration">
+			<baseTendDurationHours>12</baseTendDurationHours>
+			<severityPerDayTended>-0.1073</severityPerDayTended>
+		  </li>
+		  <li Class="HediffCompProperties_Immunizable">
+			<severityPerDayNotImmune>0.2888</severityPerDayNotImmune>
+			<immunityPerDaySick>0.22</immunityPerDaySick>
+			<severityPerDayImmune>-0.4947</severityPerDayImmune>
+			<immunityPerDayNotSick>-0.06</immunityPerDayNotSick>
+		  </li>
+		  <li Class = "MorrowRim_Dagoth.HediffCompProperties_Corprus"></li>
+		</comps>
+		<stages>
+		  <li>
+			<label>initial</label>
+			<painOffset>0.10</painOffset>
+			<hediffGivers>
+			  <li Class="HediffGiver_Random">
+				<hediff>MorrowRim_CorprusPustule</hediff>
+				<mtbDays>10</mtbDays>
+				<partsToAffect>
+				  <li>Torso</li>
+				  <li>Shoulder</li>
+				  <li>Arm</li>
+				  <li>Hand</li>
+				  <li>Finger</li>
+				  <li>Waist</li>
+				  <li>Toe</li>
+				  <li>Head</li>
+				  <li>Ear</li>
+				  <li>Nose</li>
+				  <li>Jaw</li>
+				  <li>Neck</li>
+				  <li>Leg</li>
+				  <li>Foot</li>
+				</partsToAffect>
+			  </li>
+			</hediffGivers>
+			<statOffsets>
+			  <PawnBeauty>-1</PawnBeauty>
+			</statOffsets>
+		  </li>
+		  <li>
+			<minSeverity>0.15</minSeverity>
+			<label>minor</label>
+			<painOffset>0.15</painOffset>
+			<hediffGivers>
+			  <li Class="HediffGiver_Random">
+				<hediff>MorrowRim_CorprusPustule</hediff>
+				<mtbDays>6</mtbDays>
+				<canAffectAnyLivePart>true</canAffectAnyLivePart>
+			  </li>
+			</hediffGivers>
+			<statOffsets>
+			  <PawnBeauty>-2</PawnBeauty>
+			</statOffsets>
+		  </li>
+		  <li>
+			<minSeverity>0.30</minSeverity>
+			<label>moderate</label>
+			<painOffset>0.30</painOffset>
+			<hediffGivers>
+			  <li Class="HediffGiver_Random">
+				<hediff>MorrowRim_CorprusPustule</hediff>
+				<mtbDays>4</mtbDays>
+				<partsToAffect>
+				  <li>Torso</li>
+				  <li>Shoulder</li>
+				  <li>Arm</li>
+				  <li>Hand</li>
+				  <li>Finger</li>
+				  <li>Waist</li>
+				  <li>Toe</li>
+				  <li>Head</li>
+				  <li>Ear</li>
+				  <li>Nose</li>
+				  <li>Jaw</li>
+				  <li>Neck</li>
+				  <li>Leg</li>
+				  <li>Foot</li>
+				</partsToAffect>
+			  </li>
+			</hediffGivers>
+			<statOffsets>
+			  <PawnBeauty>-3</PawnBeauty>
+			</statOffsets>
+		  </li>
+		  <li>
+			<minSeverity>0.60</minSeverity>
+			<label>major</label>
+			<vomitMtbDays>1.5</vomitMtbDays>
+			<painOffset>0.60</painOffset>
+			<capMods>
+			  <li>
+				<capacity>Manipulation</capacity>
+				<offset>-0.3</offset>
+			  </li>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>-0.3</offset>
+			  </li>
+			  <li>
+				<capacity>Breathing</capacity>
+				<offset>-0.15</offset>
+			  </li>
+			</capMods>
+			<hediffGivers>
+			  <li Class="HediffGiver_Random">
+				<hediff>MorrowRim_CorprusPustule</hediff>
+				<mtbDays>2</mtbDays>
+				<partsToAffect>
+				  <li>Torso</li>
+				  <li>Shoulder</li>
+				  <li>Arm</li>
+				  <li>Hand</li>
+				  <li>Finger</li>
+				  <li>Waist</li>
+				  <li>Toe</li>
+				  <li>Head</li>
+				  <li>Ear</li>
+				  <li>Nose</li>
+				  <li>Jaw</li>
+				  <li>Neck</li>
+				  <li>Leg</li>
+				  <li>Foot</li>
+				</partsToAffect>
+			  </li>
+			</hediffGivers>
+			<statOffsets>
+			  <PawnBeauty>-4</PawnBeauty>
+			</statOffsets>
+		  </li>
+		  <li>
+			<minSeverity>0.85</minSeverity>
+			<label>extreme</label>
+			<lifeThreatening>false</lifeThreatening>
+			<vomitMtbDays>0.75</vomitMtbDays>
+			<painOffset>0.80</painOffset>
+			<capMods>
+			  <li>
+				<capacity>Manipulation</capacity>
+				<offset>1.0</offset>
+			  </li>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>-0.3</offset>
+			  </li>
+			</capMods>
+			<hediffGivers>
+			  <li Class="HediffGiver_Random">
+				<hediff>MorrowRim_CorprusPustule</hediff>
+				<mtbDays>1</mtbDays>
+				<partsToAffect>
+				  <li>Torso</li>
+				  <li>Shoulder</li>
+				  <li>Arm</li>
+				  <li>Hand</li>
+				  <li>Finger</li>
+				  <li>Waist</li>
+				  <li>Toe</li>
+				  <li>Head</li>
+				  <li>Ear</li>
+				  <li>Nose</li>
+				  <li>Jaw</li>
+				  <li>Neck</li>
+				  <li>Leg</li>
+				  <li>Foot</li>
+				</partsToAffect>
+			  </li>
+			</hediffGivers>
+			<statOffsets>
+			  <PawnBeauty>-5</PawnBeauty>
+			</statOffsets>
+		  </li>
+		  <li>
+			<minSeverity>1</minSeverity>
+			<label>permanent corprus</label>
+			<lifeThreatening>false</lifeThreatening>
+			<vomitMtbDays>0.75</vomitMtbDays>
+			<painOffset>-1</painOffset>
+			<capMods>
+			  <li>
+				<capacity>Manipulation</capacity>
+				<offset>0.5</offset>
+			  </li>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>-0.5</offset>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+  
+	<HediffDef>
+		<defName>MorrowRim_CorprusSurvived</defName>
+		<label>survived corprus</label>
+		<description>The result of one somehow managing to survive the full effects of corprus. The survivor has retained their greatly enhanced strength and gained a resistance to pain, and to corprus itself</description>
+		<defaultLabelColor>(0.4, 0.8, 0.6)</defaultLabelColor>
+		<makesSickThought>false</makesSickThought>
+		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<stages>
+			<li>
+				<painOffset>-1</painOffset>
+				<capMods>
+				  <li>
+					<capacity>Manipulation</capacity>
+					<offset>0.5</offset>
+				  </li>
+				</capMods>
+				<makeImmuneTo>
+					<li>MorrowRim_Corprus</li>
+				</makeImmuneTo>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>MorrowRim_CorprusPermanent</defName>
+		<label>permanent corprus</label>
+		<description>The result of untreated corprus. The victim will now lash out at anything that gets too close with greatly enhanced strength and a complete resistance to pain.</description>
+		<makesSickThought>false</makesSickThought>
+		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<stages>
+			<li>
+				<painOffset>-1</painOffset>
+				<capMods>
+				  <li>
+					<capacity>Manipulation</capacity>
+					<offset>0.5</offset>
+				  </li>
+				  <li>
+					<capacity>Moving</capacity>
+					<offset>-0.5</offset>
+				  </li>
+				</capMods>
+				<makeImmuneTo>
+					<li>MorrowRim_Corprus</li>
+				</makeImmuneTo>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- corprus pustule -->
+	  
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>MorrowRim_CorprusPustule</defName>
+    <label>corprus pustule</label>
+    <labelNoun>a corprus pustule</labelNoun>
+    <description>A painful pustule caused by corprus. Without treatment, the pustule will grow over time, causing worsening symptoms and eventually killing the patient.
+\nA skilled doctor can excise the pustule. An unskilled doctor may be able to simply amputate the body part which contains the pustule.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <initialSeverity>0.3</initialSeverity>
+    <chanceToCauseNoPain>0.3</chanceToCauseNoPain>
+    <tendable>true</tendable>
+    <removeOnQuestLodgers>true</removeOnQuestLodgers>
+    <stages>
+      <li>
+        <label>minor</label>
+        <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+        <painOffset>0.1</painOffset>
+      </li>
+      <li>
+        <minSeverity>0.15</minSeverity>
+        <label>minor</label>
+        <partEfficiencyOffset>-0.25</partEfficiencyOffset>
+        <painOffset>0.2</painOffset>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <label>major</label>
+        <partEfficiencyOffset>-0.5</partEfficiencyOffset>
+        <painOffset>0.35</painOffset>
+      </li>
+      <li>
+        <minSeverity>0.6</minSeverity>
+        <label>major</label>
+        <partEfficiencyOffset>-0.8</partEfficiencyOffset>
+        <painOffset>0.5</painOffset>
+      </li>
+      <li>
+        <minSeverity>0.8</minSeverity>
+        <label>extreme</label>
+        <partEfficiencyOffset>-0.9</partEfficiencyOffset>
+        <painOffset>0.6</painOffset>
+      </li>
+      <li>
+        <minSeverity>1</minSeverity>
+        <label>extreme</label>
+        <partEfficiencyOffset>-1.0</partEfficiencyOffset>
+        <painOffset>0.7</painOffset>
+        <destroyPart>true</destroyPart>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>96</baseTendDurationHours>
+        <severityPerDayTended>-0.0027</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_GrowthMode">
+        <severityPerDayGrowing>0.003</severityPerDayGrowing>
+        <severityPerDayRemission>-0.002</severityPerDayRemission>
+        <severityPerDayGrowingRandomFactor>0.45~1.65</severityPerDayGrowingRandomFactor>
+        <severityPerDayRemissionRandomFactor>0.7~1.5</severityPerDayRemissionRandomFactor>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>MorrowRim_ExciseCorprusPustule</defName>
+    <label>excise corprus pustule</label>
+    <description>Excise a corprus pustule.</description>
+    <workerClass>Recipe_RemoveHediff</workerClass>
+    <jobString>Excising pustule.</jobString>
+    <workAmount>4500</workAmount>
+    <removesHediff>MorrowRim_CorprusPustule</removesHediff>
+    <successfullyRemovedHediffMessage>{0} has successfully excised {1}'s pustule.</successfullyRemovedHediffMessage>
+    <deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>10</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>MedicineHerbal</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+	
+</Defs>

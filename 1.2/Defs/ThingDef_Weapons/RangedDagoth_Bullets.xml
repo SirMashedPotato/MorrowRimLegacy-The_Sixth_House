@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- basic -->
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_PulseSigil</defName>
+		<label>electric pulse</label>
+		<graphicData>
+		  <texPath>Things/Projectile/LauncherShot</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>TransparentPostLight</shaderType>
+		  <color>(223,254,254)</color>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+		  <!-- Use default damage from explosion def -->
+		  <speed>15</speed>
+		  <explosionRadius>1.6</explosionRadius >
+		  <damageDef>EMP</damageDef>
+		  <explosionDelay>10</explosionDelay>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_EarwigSigil</defName>
+		<label>disorientating pulse</label>
+		<graphicData>
+		  <texPath>Things/Projectile/LauncherShot</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>TransparentPostLight</shaderType>
+		  <color>(223,254,254)</color>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+		  <!-- Use default damage from explosion def -->
+		  <speed>15</speed>
+		  <explosionRadius>1.6</explosionRadius >
+		  <damageDef>Stun</damageDef>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_FireSigil</defName>
+		<label>fire bloom</label>
+		<graphicData>
+		  <texPath>Things/Projectile/LauncherShot</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>TransparentPostLight</shaderType>
+		  <color>(254,189,58)</color>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+		  <damageDef>Flame</damageDef>
+		  <!-- Use default damage from explosion def -->
+		  <speed>15</speed>
+		  <explosionRadius>1.6</explosionRadius >
+		  <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+		  <preExplosionSpawnChance>0.27</preExplosionSpawnChance>
+		  <ai_IsIncendiary>true</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_ToxicSigil</defName>
+		<label>toxic bloom</label>
+		<graphicData>
+		  <texPath>Things/Projectile/LauncherShot</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>TransparentPostLight</shaderType>
+		  <color>(189,254,58)</color>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+		  <damageDef>Burn</damageDef>
+		  <!-- Use default damage from explosion def -->
+		  <speed>15</speed>
+		  <postExplosionSpawnThingDef>Dagoth_Gas_Toxic</postExplosionSpawnThingDef>
+		  <postExplosionSpawnChance>1</postExplosionSpawnChance>
+		  <explosionRadius>1.6</explosionRadius>
+		  <ai_IsIncendiary>true</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_ColdSigil</defName>
+		<label>frost bloom</label>
+		<graphicData>
+		  <texPath>Things/Projectile/LauncherShot</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>TransparentPostLight</shaderType>
+		  <color>(195,232,250)</color>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+		  <damageDef>Burn</damageDef>
+		  <!-- Use default damage from explosion def -->
+		  <speed>15</speed>
+		  <postExplosionSpawnThingDef>Dagoth_Gas_Cold</postExplosionSpawnThingDef>
+		  <postExplosionSpawnChance>1</postExplosionSpawnChance>
+		  <explosionRadius>1.6</explosionRadius>
+		  <ai_IsIncendiary>true</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_DrainingSigil</defName>
+		<label>dagoth's bosom</label>
+		<graphicData>
+		  <texPath>Things/Projectile/LauncherShot</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>TransparentPostLight</shaderType>
+		  <color>(50,40,40)</color>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+		  <damageDef>Burn</damageDef>
+		  <!-- Use default damage from explosion def -->
+		  <speed>10</speed>
+		  <postExplosionSpawnThingDef>Dagoth_Gas_Fatigue</postExplosionSpawnThingDef>
+		  <postExplosionSpawnChance>1</postExplosionSpawnChance>
+		  <explosionRadius>2.6</explosionRadius>
+		  <ai_IsIncendiary>true</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
+	
+	<!-- to be put in patches -->
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_DivineTouchSigil</defName>
+		<label>dagoth's divine touch</label>
+		<graphicData>
+		  <texPath>Things/Projectile/LauncherShot</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>TransparentPostLight</shaderType>
+		  <color>(80,40,40)</color>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+		  <damageDef>Burn</damageDef>
+		  <!-- Use default damage from explosion def -->
+		  <speed>10</speed>
+		  <postExplosionSpawnThingDef>Gas_Corprus</postExplosionSpawnThingDef>
+		  <postExplosionSpawnChance>1</postExplosionSpawnChance>
+		  <explosionRadius>2.6</explosionRadius>
+		  <ai_IsIncendiary>true</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
+
+</Defs>

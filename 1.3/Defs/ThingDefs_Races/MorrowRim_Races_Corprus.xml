@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!-- corprus base -->
+	
+	<ThingDef ParentName="Dagoth_BasePawn" Name="MorrowRim_BaseCorprus" Abstract="True">
+		<!--<modExtensions>
+			<li Class="MorrowRim.ExtendedRaceProperties">
+                <ashResistant>Resistant</ashResistant>
+            </li>
+		</modExtensions>-->
+		<statBases>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<ToxicSensitivity>0</ToxicSensitivity>
+			<MoveSpeed>0.6</MoveSpeed>
+			<MarketValue>0</MarketValue>
+			<ComfyTemperatureMin>-20</ComfyTemperatureMin>
+			<ComfyTemperatureMax>70</ComfyTemperatureMax>
+			<MeatAmount>0</MeatAmount>
+		</statBases>
+		<description>The culmination of untreated corprus. The disease has reached its maturity, causing the victim to become highly contagious.</description>
+		<comps>
+			<li Class="MorrowRim_Dagoth.CompProperties_CorprusSpawnInit"></li>
+		</comps>
+		<race>
+		  <herdMigrationAllowed>false</herdMigrationAllowed>
+		  <thinkTreeMain>MorrowRim_Corprus</thinkTreeMain>
+		  <useMeatFrom>Human</useMeatFrom>
+		  <fleshType>MorrowRim_AshBeast</fleshType>
+		  <predator>true</predator>
+		  <maxPreyBodySize>3</maxPreyBodySize>
+		  <baseHungerRate>0.0</baseHungerRate>
+		  <foodType>CarnivoreAnimalStrict</foodType>
+		  <needsRest>false</needsRest>
+		  <leatherDef>MorrowRim_CorprusWeepings</leatherDef>
+		  <wildness>1</wildness>
+		  <trainability>None</trainability>
+		  <canBePredatorPrey>false</canBePredatorPrey>
+		  <lifeExpectancy>10000</lifeExpectancy>
+		  <gestationPeriodDays>10000</gestationPeriodDays>
+		  <manhunterOnTameFailChance>1</manhunterOnTameFailChance>
+		  <manhunterOnDamageChance>1</manhunterOnDamageChance>
+		  <nameCategory>HumanStandard</nameCategory>
+		  <hasGenders>true</hasGenders>
+		  <intelligence>Animal</intelligence>
+		  <lifeStageAges>
+			<li>
+			  <def>HumanlikeAdult</def>
+			  <minAge>0</minAge>
+			</li>
+		  </lifeStageAges>
+		  <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		  <ageGenerationCurve>
+			<points>
+			  <li>(0,0)</li>
+			  <li>(1,100)</li>
+			  <li>(2,0)</li>
+			</points>
+		  </ageGenerationCurve>
+		</race>
+		<butcherProducts Inherit="false">
+		</butcherProducts>
+		<recipes>
+			<li>RemoveBodyPart</li>
+			<li>Euthanize</li>
+			<li>Anesthetize</li>
+		</recipes>
+	</ThingDef>
+	
+	<!-- Corprus stalker -->
+	
+	<ThingDef ParentName="MorrowRim_BaseCorprus">
+		<defName>MorrowRim_CorprusStalker</defName>
+		<label>corprus stalker</label>
+		<description>The culmination of untreated corprus. The disease has reached its maturity, causing the victim to become highly contagious.\n\nThe corprus stalker is the most commonly encountered corprus victim. It has undergone comparatively smaller physical changes, and is a lesser threat than other types.</description>
+		<uiIconScale>1.35</uiIconScale>
+		<tools>
+		  <li>
+			<label>left hand</label>
+			<capacities>
+			  <li>MorrowRim_CorprusScratch</li>
+			</capacities>
+			<power>8.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right hand</label>
+			<capacities>
+			  <li>MorrowRim_CorprusScratch</li>
+			</capacities>
+			<power>8.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>teeth</label>
+			<capacities>
+			  <li>MorrowRim_CorprusBite</li>
+			</capacities>
+			<power>8.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<chanceFactor>0.07</chanceFactor>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<race>
+		  <body>Human</body>
+		  <baseBodySize>1</baseBodySize>
+		  <baseHealthScale>2.3</baseHealthScale>
+		</race>
+	</ThingDef>
+	  
+	<PawnKindDef Name="MorrowRim_CorprusStalker">
+		<defName>MorrowRim_CorprusStalker</defName>
+		<label>corprus stalker</label>
+		<race>MorrowRim_CorprusStalker</race>
+		<combatPower>150</combatPower>
+		<defaultFactionType>MorrowRim_Corprus</defaultFactionType>
+		<ecoSystemWeight>50</ecoSystemWeight>
+		<canArriveManhunter>true</canArriveManhunter>
+		<wildGroupSize>1</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>MorrowRim/Corprus/Stalker/Stalker</texPath>
+			  <drawSize>1.5</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>MorrowRim/Corprus/Stalker/Dessicated_Stalker</texPath>
+			  <drawSize>1.5</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+	
+	<!-- lame corprus -->
+	
+	<ThingDef ParentName="MorrowRim_BaseCorprus">
+		<defName>MorrowRim_CorprusLame</defName>
+		<label>lame corprus</label>
+		<description>The culmination of untreated corprus. The disease has reached its maturity, causing the victim to become highly contagious.\n\nThe lame stalker is a much greater threat. The divine disease has caused uncontrolled muscular regeneration, resulting in the victims limbs growing to abnormal sizes. Though this growth negatively affects mobility.</description>
+		<uiIconScale>1.35</uiIconScale>
+		<statBases>
+			<MoveSpeed>0.4</MoveSpeed>
+		</statBases>
+		<tools>
+		  <li>
+			<label>left hand</label>
+			<capacities>
+			  <li>Blunt</li>
+			  <li>MorrowRim_CorprusScratch</li>
+			</capacities>
+			<power>14</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right hand</label>
+			<capacities>
+			  <li>Blunt</li>
+			  <li>MorrowRim_CorprusScratch</li>
+			</capacities>
+			<power>14</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>teeth</label>
+			<capacities>
+			  <li>MorrowRim_CorprusBite</li>
+			</capacities>
+			<power>8.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<chanceFactor>0.07</chanceFactor>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<race>
+		  <body>Human</body>
+		  <baseBodySize>1.2</baseBodySize>
+		  <baseHealthScale>3.8</baseHealthScale>
+		</race>
+	</ThingDef>
+	  
+	<PawnKindDef Name="MorrowRim_CorprusLame">
+		<defName>MorrowRim_CorprusLame</defName>
+		<label>lame corprus</label>
+		<race>MorrowRim_CorprusLame</race>
+		<combatPower>180</combatPower>
+		<defaultFactionType>MorrowRim_Corprus</defaultFactionType>
+		<ecoSystemWeight>50</ecoSystemWeight>
+		<canArriveManhunter>true</canArriveManhunter>
+		<wildGroupSize>1</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>MorrowRim/Corprus/Lame/Lame</texPath>
+			  <drawSize>1.5</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>MorrowRim/Corprus/Stalker/Dessicated_Stalker</texPath>
+			  <drawSize>1.5</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+	
+	<!-- bloated corprus -->
+		
+	<ThingDef ParentName="MorrowRim_BaseCorprus">
+		<defName>MorrowRim_CorprusBloated</defName>
+		<label>bloated corprus</label>
+		<description>The culmination of untreated corprus. The disease has reached its maturity, causing the victim to become highly contagious.\n\nThe bloated corprus has undergone uncontrolled cellular growth, resulting in the victim being covered in oversized corprus pustules. Upon death, the bloated corprus may explode, filling the air in a fine mist of corprus infected particles.</description>
+		<uiIconScale>1.35</uiIconScale>
+		<statBases>
+			<MoveSpeed>3.8</MoveSpeed>
+		</statBases>
+		<tools>
+		  <li>
+			<label>left hand</label>
+			<capacities>
+			  <li>MorrowRim_CorprusScratch</li>
+			</capacities>
+			<power>8.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right hand</label>
+			<capacities>
+			  <li>MorrowRim_CorprusScratch</li>
+			</capacities>
+			<power>8.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<race>
+		  <deathActionWorkerClass>MorrowRim_Dagoth.DeathActionWorker_BloatedCorprus</deathActionWorkerClass>
+		  <body>Human</body>
+		  <baseBodySize>1</baseBodySize>
+		  <baseHealthScale>0.8</baseHealthScale>
+		</race>
+	</ThingDef>
+	  
+	<PawnKindDef Name="MorrowRim_CorprusBloated">
+		<defName>MorrowRim_CorprusBloated</defName>
+		<label>bloated corprus</label>
+		<race>MorrowRim_CorprusBloated</race>
+		<combatPower>150</combatPower>
+		<defaultFactionType>MorrowRim_Corprus</defaultFactionType>
+		<ecoSystemWeight>50</ecoSystemWeight>
+		<canArriveManhunter>true</canArriveManhunter>
+		<wildGroupSize>1</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>MorrowRim/Corprus/Bloated/Bloated</texPath>
+			  <drawSize>1.5</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>MorrowRim/Corprus/Stalker/Dessicated_Stalker</texPath>
+			  <drawSize>1.5</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+	
+
+</Defs>

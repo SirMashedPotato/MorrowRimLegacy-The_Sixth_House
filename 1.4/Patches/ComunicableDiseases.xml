@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+    <Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Communicable Diseases [1.1]</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<!-- Corprus Germs -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="BaseFilth">
+							<defName>MorrowRim_Filth_CorprusPus</defName>
+							<label>corprus pus</label>
+							<graphicData>
+							  <texPath>Things/Filth/Grainy</texPath>
+							  <color>(91,75,45,50)</color>
+							</graphicData>
+							<filth>
+							  <disappearsInDays>1~2</disappearsInDays>
+							  <cleaningWorkToReduceThickness>5</cleaningWorkToReduceThickness>
+							  <canFilthAttach>true</canFilthAttach>
+							</filth>
+						</ThingDef>
+					</value>
+				</li>
+				
+				
+				
+				<!-- Corprus HediffGiverSetDef -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/HediffGiverSetDef[defName = "Human"]/hediffGivers</xpath>
+					<value>
+						<li Class="CommunicableDiseases.HediffGiver_CommunicateDiseaseDirect">
+							<diseaseDef>MorrowRim_Corprus</diseaseDef>
+							<diseaseFilth>MorrowRim_Filth_CorprusPus</diseaseFilth>
+							<germDropRate>100</germDropRate>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/HediffGiverSetDef[@Name = "MorrowRim_BaseCorprus"]/hediffGivers</xpath>
+					<value>
+						<li Class="CommunicableDiseases.HediffGiver_CommunicateDiseaseDirect">
+							<diseaseDef>MorrowRim_CorprusPermanent</diseaseDef>
+							<diseaseFilth>MorrowRim_Filth_CorprusPus</diseaseFilth>
+							<germDropRate>100</germDropRate>
+						</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+  
+</Patch>

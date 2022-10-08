@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Corprus -->
+	
+	<ThingDef ParentName="LeatherBase">
+		<defName>MorrowRim_CorprusWeepings</defName>
+		<label>corprus weepings</label>
+		<description>Skin carved from a corprus victim. It is coated in hardened puss and smells rancid. Completely useless in crafting, and worth effectively nothing. It serves only as a reminder of what once was.</description>
+		<graphicData>
+		  <color>(211,194,143)</color>
+		</graphicData>
+		<statBases>
+		  <MarketValue>0.1</MarketValue>
+		  <StuffPower_Armor_Sharp>0.0</StuffPower_Armor_Sharp>
+		  <StuffPower_Insulation_Cold>0</StuffPower_Insulation_Cold>
+		  <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+		  <color>(211,194,143)</color>
+		  <commonality>0.00025</commonality>
+		  <statFactors>
+			<Beauty>-10</Beauty>
+			<Comfort>-5</Comfort>
+		  </statFactors>
+		</stuffProps>
+	</ThingDef>
+
+</Defs>

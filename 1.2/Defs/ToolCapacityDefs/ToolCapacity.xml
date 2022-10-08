@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ToolCapacityDef>
+    <defName>Dagoth_ParalyticBreath</defName>
+    <label>Paralytic breath</label>
+  </ToolCapacityDef>
+  
+  <ToolCapacityDef>
+    <defName>Dagoth_FireBite</defName>
+    <label>igniting breath</label>
+  </ToolCapacityDef>
+  
+  <ToolCapacityDef>
+    <defName>Dagoth_DivineBreath</defName>
+    <label>divine breath</label>
+  </ToolCapacityDef>
+  
+  <ToolCapacityDef>
+    <defName>Dagoth_DivineGaze</defName>
+    <label>divine gaze</label>
+  </ToolCapacityDef>
+  
+  <!-- blights -->
+
+  <ToolCapacityDef>
+    <defName>Dagoth_Blight_AshChancre</defName>
+    <label>ash-chancre breath</label>
+  </ToolCapacityDef>
+  
+  <ToolCapacityDef>
+    <defName>Dagoth_Blight_AshWoe</defName>
+    <label>ash-woe breath</label>
+  </ToolCapacityDef>
+  
+  <ToolCapacityDef>
+    <defName>Dagoth_Blight_BlackHeart</defName>
+    <label>black-heart breath</label>
+  </ToolCapacityDef>
+  
+  <ToolCapacityDef>
+    <defName>Dagoth_Blight_Chanthrax</defName>
+    <label>chanthrax breath</label>
+  </ToolCapacityDef>
+  
+</Defs>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!-- game condition incidents -->
+
+	<IncidentDef>
+		<defName>Dagoth_BlightVolcanicWinter</defName>
+		<label>volcanic winter</label>
+		<category>Dagoth_Blight</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>VolcanicWinter</gameCondition>
+		<letterLabel>Volcanic winter</letterLabel>
+		<letterDef>ThreatSmall</letterDef>
+		<baseChance>1.0</baseChance>
+		<earliestDay>20</earliestDay>
+		<minRefireDays>80</minRefireDays>
+		<minDifficulty>2</minDifficulty>
+		<durationDays>7.5~40</durationDays>
+		<tale>VolcanicWinter</tale>
+	</IncidentDef>
+	
+	<!-- other incidents -->
+	
+	<IncidentDef>
+		<defName>Dagoth_CropBlight</defName>
+		<label>crop blight</label>
+		<category>Dagoth_Blight</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_CropBlight</workerClass>
+		<baseChance>0.3</baseChance>
+		<minRefireDays>3</minRefireDays>
+		<pointsScaleable>true</pointsScaleable>
+		<earliestDay>5</earliestDay>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>Dagoth_AnimalBlightSingle</defName>
+		<label>single animal blight</label>
+		<category>Dagoth_Blight</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_AnimalBlightSingle</workerClass>
+		<baseChance>1</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<earliestDay>0</earliestDay>
+	</IncidentDef>
+
+</Defs>

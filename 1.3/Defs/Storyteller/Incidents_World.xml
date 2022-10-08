@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Dream incidents -->
+	<!--
+	<IncidentDef>
+		<defName>Dagoth_DreamSettlementClaimed</defName>
+		<label>settlement claimed</label>
+		<category>Dagoth_Dream</category>
+		<targetTags>
+		  <li>World</li>
+		</targetTags>
+		<letterText>One of your {0} had a dream of a settlement being ransacked.\n\n{1}\n\n{2} has been taken by {3}.</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_SettlementClaimed</workerClass>
+		<baseChance>1.0</baseChance>
+		<minRefireDays>8</minRefireDays>
+	</IncidentDef>
+	-->
+	<!-- Blight incidents -->
+	
+	<IncidentDef>
+		<defName>Dagoth_BlightSettlementClaimed</defName>
+		<label>settlement claimed</label>
+		<category>Dagoth_Blight</category>
+		<targetTags>
+		  <li>World</li>
+		</targetTags>
+		<letterText>Word has reached your colony that {0} have seized control of {1} from {2}.</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<workerClass>MorrowRim_Dagoth.IncidentWorker_SettlementClaimed</workerClass>
+		<baseChance>0.5</baseChance>
+		<minRefireDays>5</minRefireDays>
+		<earliestDay>5</earliestDay>
+	</IncidentDef>
+
+</Defs>

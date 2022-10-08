@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef Abstract="True" ParentName="InfectionBase" Name="Dagoth_BlightBase">
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.6, 0.4)</defaultLabelColor>
+		<makesSickThought>true</makesSickThought>
+		<makesAlert>true</makesAlert>
+		<minSeverity>0.001</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>0.001</initialSeverity>
+		<tendable>true</tendable>
+		<comps>
+		  <li Class="HediffCompProperties_TendDuration">
+			<baseTendDurationHours>48</baseTendDurationHours>
+			<severityPerDayTended>-1.0</severityPerDayTended>
+			<disappearsAtTotalTendQuality>3</disappearsAtTotalTendQuality>
+		  </li>
+		  <li Class="HediffCompProperties_Immunizable">
+			<severityPerDayNotImmune>0.25</severityPerDayNotImmune>
+		  </li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef ParentName="Dagoth_BlightBase">
+		<defName>Dagoth_Blight_AshChancre</defName>
+		<description>One of the rare blight diseases carried in ash. Far less dangerous than corprus. This blight affects its victims behavior.</description>
+		<label>ash-chancre blight</label>
+		<stages>
+		  <li>
+			<painOffset>0.2</painOffset>
+			<label>early stage</label>
+			<restFallFactorOffset>1</restFallFactorOffset>
+			<capMods>
+			  <li>
+				<capacity>Talking</capacity>
+				<offset>-0.2</offset>
+			  </li>
+			</capMods>
+		  </li>
+		  <li>
+		    <minSeverity>0.5</minSeverity>
+			<painOffset>0.2</painOffset>
+			<label>late stage</label>
+			<restFallFactorOffset>1</restFallFactorOffset>
+			<capMods>
+			  <li>
+				<capacity>Talking</capacity>
+				<offset>-0.4</offset>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="Dagoth_BlightBase">
+		<defName>Dagoth_Blight_AshWoe</defName>
+		<description>One of the rare blight diseases carried in ash. Far less dangerous than corprus. This blight drains its victims cognition.</description>
+		<label>ash-woe blight</label>
+		<stages>
+		  <li>
+			<painOffset>0.2</painOffset>
+			<label>early stage</label>
+			<restFallFactorOffset>1</restFallFactorOffset>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.2</offset>
+			  </li>
+			</capMods>
+		  </li>
+		  <li>
+		    <minSeverity>0.5</minSeverity>
+			<painOffset>0.2</painOffset>
+			<label>late stage</label>
+			<restFallFactorOffset>1</restFallFactorOffset>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.4</offset>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="Dagoth_BlightBase">
+		<defName>Dagoth_Blight_BlackHeart</defName>
+		<description>One of the rare blight diseases carried in ash. Far less dangerous than corprus. This blight drains its victims strength.</description>
+		<label>black-heart blight</label>
+		<stages>
+		  <li>
+			<painOffset>0.2</painOffset>
+			<label>early stage</label>
+			<restFallFactorOffset>1</restFallFactorOffset>
+			<capMods>
+			  <li>
+				<capacity>Manipulation</capacity>
+				<offset>-0.2</offset>
+			  </li>
+			</capMods>
+		  </li>
+		  <li>
+		    <minSeverity>0.5</minSeverity>
+			<painOffset>0.2</painOffset>
+			<label>late stage</label>
+			<restFallFactorOffset>1</restFallFactorOffset>
+			<capMods>
+			  <li>
+				<capacity>Manipulation</capacity>
+				<offset>-0.4</offset>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="Dagoth_BlightBase">
+		<defName>Dagoth_Blight_Chanthrax</defName>
+		<description>One of the rare blight diseases carried in ash. Far less dangerous than corprus. This blight drains its victims agility.</description>
+		<label>chanthrax blight</label>
+		<stages>
+		  <li>
+			<painOffset>0.2</painOffset>
+			<label>early stage</label>
+			<restFallFactorOffset>1</restFallFactorOffset>
+			<capMods>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>-0.2</offset>
+			  </li>
+			</capMods>
+		  </li>
+		  <li>
+		    <minSeverity>0.5</minSeverity>
+			<painOffset>0.2</painOffset>
+			<label>late stage</label>
+			<restFallFactorOffset>1</restFallFactorOffset>
+			<capMods>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>-0.4</offset>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+	  
+</Defs>

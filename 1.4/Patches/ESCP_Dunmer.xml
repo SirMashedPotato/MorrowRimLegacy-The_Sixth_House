@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ESCP - Dunmer</li>
+    </mods>
+
+    <match Class="PatchOperationSequence">
+		<operations>
+		
+			<!-- change leathers -->
+			
+			<li Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Dagoth_Ghoul" or defName = "Dagoth_Slave" or defName = "Dagoth_Zombie" ]/race</xpath>
+			<value>
+				<leatherDef>ESCP_LeatherDunmer</leatherDef>
+			</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[@Name = "Dagoth_BasePawn"]/race/useMeatFrom</xpath>
+			<value>
+				<useMeatFrom>ESCP_DunmerRace</useMeatFrom>
+			</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Dagoth_Ascended" or defName = "Dagoth_Ghoul" or defName = "Dagoth_Slave" or defName = "Dagoth_Vampire" or defName = "Dagoth_Zombie"]/race</xpath>
+			<value>
+				<useMeatFrom>ESCP_DunmerRace</useMeatFrom>
+			</value>
+			</li>
+			
+			<!-- replace dreamer -->
+			
+			<li Class="PatchOperationReplace">
+			<xpath>/Defs/PawnKindDef[defName = "Dagoth_TribalDreamer"]</xpath>
+				<value>
+					<PawnKindDef ParentName="ESCP_DunmerTribalBase">
+						<defName>Dagoth_TribalDreamer</defName>
+						<defaultFactionType>MorrowRim_SixthHouse</defaultFactionType>
+						<label>dreamer</label>
+						<combatPower>35</combatPower>
+						<chemicalAddictionChance>0.10</chemicalAddictionChance>
+						<invNutrition>0.1</invNutrition>
+						<itemQuality>Poor</itemQuality>
+						<gearHealthRange>0.2~1.1</gearHealthRange>
+						<apparelMoney>10~30</apparelMoney>
+						<weaponMoney>90~150</weaponMoney>
+						<weaponTags>
+						  <li>NeolithicMeleeBasic</li>
+						</weaponTags>
+						<techHediffsMoney>50~50</techHediffsMoney>
+						<techHediffsTags>
+						  <li>Poor</li>
+						</techHediffsTags>
+						<techHediffsChance>0.15</techHediffsChance>
+						<initialWillRange>0~1</initialWillRange>
+						<initialResistanceRange>20~30</initialResistanceRange>
+					</PawnKindDef>
+				</value>
+			</li>
+			<!--
+			<li Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName = "ESCP_SixthHouse"]</xpath>
+				<value>
+					<pawnNameMaker>ESCP_NamerPersonDunmerMale</pawnNameMaker>
+					<pawnNameMakerFemale>ESCP_NamerPersonDunmerFemale</pawnNameMakerFemale>
+				</value>
+			</li>
+			-->
+		</operations>
+    </match>
+  </Operation>
+
+</Patch>

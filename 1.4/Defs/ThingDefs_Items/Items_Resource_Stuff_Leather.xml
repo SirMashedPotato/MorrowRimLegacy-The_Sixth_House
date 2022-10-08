@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="LeatherBase">
+		<defName>Dagoth_AshLeather</defName>
+		<label>ash leather</label>
+		<description>Skin carved from a servant of Dagoth Ur. Many of these servants were once Dunmer. Now tainted by the divine touch of Dagoth Ur, they have taken on terrifying and monstrous forms. Highly protective against fire and heat.</description>
+		<graphicData>
+		  <color>(141,135,132)</color>
+		</graphicData>
+		<statBases>
+		  <MarketValue>9.4</MarketValue>
+		  <StuffPower_Armor_Sharp>00.74</StuffPower_Armor_Sharp>
+		  <StuffPower_Insulation_Cold>-5</StuffPower_Insulation_Cold>
+		  <StuffPower_Insulation_Heat>26</StuffPower_Insulation_Heat>
+		  <StuffPower_Armor_Heat>3.6</StuffPower_Armor_Heat>
+		</statBases>
+		<stuffProps>
+		  <color>(141,135,132)</color>
+		  <commonality>0.00025</commonality>
+		  <statFactors>
+			<Beauty>0</Beauty>
+		  </statFactors>
+		</stuffProps>
+	</ThingDef>
+
+</Defs>

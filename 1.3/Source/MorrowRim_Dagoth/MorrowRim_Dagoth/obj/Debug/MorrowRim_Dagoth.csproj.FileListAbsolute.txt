@@ -1,0 +1,11 @@
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Smaller\MorrowRim - The Sixth House\Source\MorrowRim_Dagoth\MorrowRim_Dagoth\obj\Debug\MorrowRim_Dagoth.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Smaller\MorrowRim - The Sixth House\Assemblies\MorrowRim_Dagoth.dll
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Smaller\MorrowRim - The Sixth House\Source\MorrowRim_Dagoth\MorrowRim_Dagoth\obj\Debug\MorrowRim_Dagoth.dll
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - The Sixth House\Assemblies\MorrowRim_Dagoth.dll
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - The Sixth House\Source\MorrowRim_Dagoth\MorrowRim_Dagoth\obj\Debug\MorrowRim_Dagoth.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - The Sixth House\Source\MorrowRim_Dagoth\MorrowRim_Dagoth\obj\Debug\MorrowRim_Dagoth.dll
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - The Sixth House\Source\MorrowRim_Dagoth\MorrowRim_Dagoth\obj\Debug\MorrowRim_Dagoth.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - The Sixth House\1.3\Source\MorrowRim_Dagoth\MorrowRim_Dagoth\obj\Debug\MorrowRim_Dagoth.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - The Sixth House\1.3\Source\MorrowRim_Dagoth\MorrowRim_Dagoth\obj\Debug\MorrowRim_Dagoth.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - The Sixth House\1.3\Source\MorrowRim_Dagoth\MorrowRim_Dagoth\obj\Debug\MorrowRim_Dagoth.dll
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - The Sixth House\1.3\Assemblies\MorrowRim_Dagoth.dll

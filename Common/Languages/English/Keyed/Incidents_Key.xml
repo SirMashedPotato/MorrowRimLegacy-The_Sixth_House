@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<LetterLabelAnimalBlightSingle>Blighted {ANIMAL_labelShort}</LetterLabelAnimalBlightSingle>
+	<AnimalBlightSingle>A local {ANIMAL_label} has been driven mad by blight. It will attack everyone it sees.</AnimalBlightSingle>
+	<MorrowRim_Notification_CorprusInfected>{0} has contracted corprus!</MorrowRim_Notification_CorprusInfected>
+
+</LanguageData>

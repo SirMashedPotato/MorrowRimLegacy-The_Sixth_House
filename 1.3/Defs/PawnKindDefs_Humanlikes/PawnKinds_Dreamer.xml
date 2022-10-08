@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef ParentName="TribalBase">
+    <defName>Dagoth_TribalDreamer</defName>
+	<defaultFactionType>MorrowRim_SixthHouse</defaultFactionType>
+    <label>dreamer</label>
+    <combatPower>35</combatPower>
+    <chemicalAddictionChance>0.10</chemicalAddictionChance>
+    <invNutrition>0.1</invNutrition>
+    <itemQuality>Poor</itemQuality>
+    <gearHealthRange>0.2~1.1</gearHealthRange>
+    <apparelMoney>10~30</apparelMoney>
+    <weaponMoney>90~150</weaponMoney>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.15</techHediffsChance>
+	<initialWillRange>2~4</initialWillRange>
+    <initialResistanceRange>80~90</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Dagoth_AshSalts</defName>
+    <label>ash salts</label>
+    <description>Grey salts harvested from servants of Dagoth Ur. The salts accumulate within their body, likely a mixture of dormant ash blights and environmental ash. Can be used to produce Divayth's delight, a drug capable of preventing ash blights and slowing corprus infection.</description>
+    <graphicData>
+      <texPath>MorrowRim/Item/Resource/AshSalts</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>6</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>0.0</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+  
+</Defs>

@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ash slaves -->
+	
+	<ThingDef ParentName="Dagoth_BaseMagic_Single">
+		<defName>Dagoth_MagicBlast_single</defName>
+		<label>kinetic blast sigil</label>
+		<description>A single use weapon of unknown origin, possibly Dwemer, or something even more ancient. Creates multiple fast moving projectiles made of pure energy when activated.</description>
+		<verbs>
+		  <li>
+			<verbClass>Verb_ShootOneUse</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_ChargeBlasterHeavy</defaultProjectile>
+			<warmupTime>1.25</warmupTime>
+			<range>26.9</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>12</burstShotCount>
+			<soundCast>Shot_ChargeBlaster</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="Dagoth_BaseMagic_Single">
+		<defName>Dagoth_MagicPulse_single</defName>
+		<label>magnetic pulse sigil</label>
+		<description>A single use weapon of unknown origin, possibly Dwemer, or something even more ancient. Creates multiple fast moving projectiles made of pure energy when activated, these detonate creating an electro-magnetical pulse on impact.</description>
+		<verbs>
+		  <li>
+			<verbClass>Verb_ShootOneUse</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_PulseSigil</defaultProjectile>
+			<forcedMissRadius>3.5</forcedMissRadius>
+			<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+			<warmupTime>1.25</warmupTime>
+			<range>26.9</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>6</burstShotCount>
+			<soundCast>Shot_ChargeBlaster</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="Dagoth_BaseMagic_Single">
+		<defName>Dagoth_Earwig_single</defName>
+		<label>disorientating pulse sigil</label>
+		<description>A single use weapon of unknown origin, possibly Dwemer, or something even more ancient. Creates multiple fast moving projectiles made of pure energy when activated, these detonate creating an disorientating pulse on impact.</description>
+		<verbs>
+		  <li>
+			<verbClass>Verb_ShootOneUse</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_EarwigSigil</defaultProjectile>
+			<forcedMissRadius>3.5</forcedMissRadius>
+			<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+			<warmupTime>1.25</warmupTime>
+			<range>26.9</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>6</burstShotCount>
+			<soundCast>Shot_ChargeBlaster</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+	<!-- ash ghouls + ^ single -->
+	
+	<ThingDef ParentName="Dagoth_BaseMagic_AdvancedSingle">
+		<defName>Dagoth_FireBloom_single</defName>
+		<label>fire bloom sigil</label>
+		<description>A single use weapon of unknown origin, possibly Dwemer, or something even more ancient. Creates two slow moving projectiles when activated. The projectiles detonate upon reaching their target, releasing a concentrated blast of heat and creating puddles of fuel.</description>
+		<verbs>
+		  <li>
+			<verbClass>Verb_ShootOneUse</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_FireSigil</defaultProjectile>
+			<forcedMissRadius>3.5</forcedMissRadius>
+			<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+			<warmupTime>1.25</warmupTime>
+			<range>16.9</range>
+			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+			<burstShotCount>2</burstShotCount>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="Dagoth_BaseMagic_AdvancedSingle">
+		<defName>Dagoth_ToxicBloom_single</defName>
+		<label>toxic bloom sigil</label>
+		<description>A single use weapon of unknown origin, possibly Dwemer, or something even more ancient. Creates two slow moving projectiles when activated. The projectiles detonate upon reaching their target, releasing a cloud of fast-acting toxic gas.</description>
+		<verbs>
+		  <li>
+			<verbClass>Verb_ShootOneUse</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_ToxicSigil</defaultProjectile>
+			<forcedMissRadius>3.5</forcedMissRadius>
+			<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+			<warmupTime>1.25</warmupTime>
+			<range>16.9</range>
+			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+			<burstShotCount>2</burstShotCount>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="Dagoth_BaseMagic_AdvancedSingle">
+		<defName>Dagoth_FrostBloom_single</defName>
+		<label>frost bloom sigil</label>
+		<description>A single use weapon of unknown origin, possibly Dwemer, or something even more ancient. Creates two slow moving projectiles when activated. The projectiles detonate upon reaching their target, releasing a cloud of cold air that rapidly freezes all in it.</description>
+		<verbs>
+		  <li>
+			<verbClass>Verb_ShootOneUse</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_ColdSigil</defaultProjectile>
+			<forcedMissRadius>3.5</forcedMissRadius>
+			<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+			<warmupTime>1.25</warmupTime>
+			<range>16.9</range>
+			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+			<burstShotCount>2</burstShotCount>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+
+	<!-- ascended sleepers -->
+
+	<ThingDef ParentName="Dagoth_BaseMagic_NonSingle">
+		<defName>Dagoth_FireStorm</defName>
+		<label>fire storm sigil</label>
+		<description>A weapon of unknown origin, possibly Dwemer, or something even more ancient. Creates a single slow moving projectile when activated. The projectiles detonate upon reaching their target, releasing a concentrated blast of heat and creating puddles of fuel.</description>
+		<verbs>
+		  <li>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_FireSigil</defaultProjectile>
+			<forcedMissRadius>3.5</forcedMissRadius>
+			<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+			<warmupTime>1.25</warmupTime>
+			<range>16.9</range>
+			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="Dagoth_BaseMagic_NonSingle">
+		<defName>Dagoth_ToxicStorm</defName>
+		<label>toxic cloud sigil</label>
+		<description>A weapon of unknown origin, possibly Dwemer, or something even more ancient. Creates a single slow moving projectile when activated. The projectiles detonate upon reaching their target, releasing a cloud of fast-acting toxic gas.</description>
+		<verbs>
+		  <li>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_ToxicSigil</defaultProjectile>
+			<forcedMissRadius>3.5</forcedMissRadius>
+			<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+			<warmupTime>1.25</warmupTime>
+			<range>16.9</range>
+			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="Dagoth_BaseMagic_NonSingle">
+		<defName>Dagoth_FrostStorm</defName>
+		<label>frost storm sigil</label>
+		<description>A weapon of unknown origin, possibly Dwemer, or something even more ancient. Creates a single slow moving projectile when activated. The projectiles detonate upon reaching their target, releasing a cloud of cold air that rapidly freezes all in it.</description>
+		<verbs>
+		  <li>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_ColdSigil</defaultProjectile>
+			<forcedMissRadius>3.5</forcedMissRadius>
+			<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+			<warmupTime>1.25</warmupTime>
+			<range>16.9</range>
+			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+	<!-- slightly more advanced -->
+	
+	<ThingDef ParentName="Dagoth_BaseMagic_AdvancedNonSingle">
+		<defName>Dagoth_DagothsBosom</defName>
+		<label>Dagoth's bosom sigil</label>
+		<description>A weapon of unknown origin, possibly Dwemer, or something even more ancient. Creates a single slow moving projectile when activated. The projectiles detonate upon reaching their target, releasing a cloud of gas that rapidly fatigues those in it.</description>
+		<verbs>
+		  <li>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_DrainingSigil</defaultProjectile>
+			<forcedMissRadius>3.5</forcedMissRadius>
+			<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+			<warmupTime>1.25</warmupTime>
+			<range>16.9</range>
+			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="Dagoth_BaseMagic_Rare">
+		<defName>Dagoth_DagothsDivineTouch</defName>
+		<label>Dagoth's divine touch sigil</label>
+		<description>A weapon of unknown origin, possibly Dwemer, or something even more ancient. Creates a single slow moving projectile when activated. The projectiles detonate upon reaching their target, releasing a cloud of ash tainted by corprus.</description>
+		<verbs>
+		  <li>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_DivineTouchSigil</defaultProjectile>
+			<forcedMissRadius>3.5</forcedMissRadius>
+			<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+			<warmupTime>1.25</warmupTime>
+			<range>16.9</range>
+			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Patch for Recipes_Genes -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Genetic Rim</li>
+		</mods> 
+				
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<!-- check if morrowrim is loaded -->
+				
+				<li Class="PatchOperationFindMod">
+				<mods>
+					<li>MorrowRim</li>
+				</mods>
+				<match Class="PatchOperationSequence">
+				<operations>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/RecipeDef[defName = "GR_ExtractGenesHuman"]/ingredients/li/filter/thingDefs</xpath>
+							<value>
+									<li>Corpse_Dagoth_Ghoul</li>
+									<li>Corpse_Dagoth_Slave</li>
+									<li>Corpse_Dagoth_Vampire</li>
+									<li>Corpse_Dagoth_Zombie</li>
+									<li>Corpse_Dagoth_Ascended</li>
+							</value>
+						</li>
+
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/RecipeDef[defName = "GR_ExtractGenesHuman"]/fixedIngredientFilter/thingDefs</xpath>
+							<value>
+									<li>Corpse_Dagoth_Ghoul</li>
+									<li>Corpse_Dagoth_Slave</li>
+									<li>Corpse_Dagoth_Vampire</li>
+									<li>Corpse_Dagoth_Zombie</li>
+									<li>Corpse_Dagoth_Ascended</li>
+							</value>
+						</li>
+					</operations>
+				</match>
+				<nomatch Class="PatchOperationSequence">
+					<operations>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/RecipeDef[defName = "GR_ExtractGenesHuman"]/ingredients/li/filter</xpath>
+							<value>
+								<thingDefs>
+									<li>Corpse_MorrowRim_CorprusStalker</li>
+									<li>Corpse_MorrowRim_CorprusLame</li>
+									<li>Corpse_Dagoth_Ghoul</li>
+									<li>Corpse_Dagoth_Slave</li>
+									<li>Corpse_Dagoth_Vampire</li>
+									<li>Corpse_Dagoth_Zombie</li>
+									<li>Corpse_Dagoth_Ascended</li>
+								</thingDefs>
+							</value>
+						</li>
+
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/RecipeDef[defName = "GR_ExtractGenesHuman"]/fixedIngredientFilter</xpath>
+							<value>
+								<thingDefs>
+									<li>Corpse_MorrowRim_CorprusStalker</li>
+									<li>Corpse_MorrowRim_CorprusLame</li>
+									<li>Corpse_Dagoth_Ghoul</li>
+									<li>Corpse_Dagoth_Slave</li>
+									<li>Corpse_Dagoth_Vampire</li>
+									<li>Corpse_Dagoth_Zombie</li>
+									<li>Corpse_Dagoth_Ascended</li>
+								</thingDefs>
+							</value>
+						</li>
+					</operations>
+				</nomatch>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>
+

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef>
+		<defName>MorrowRim_Corprus</defName>
+		<label>corprus victims</label>
+		<pawnSingular>corprus victim</pawnSingular>
+		<pawnsPlural>corprus victims</pawnsPlural>
+		<description>Victims of corprus, driven mad by Dagoth Ur. They will lash out at anything that gets too close to them, potentially infecting them with the divine disease.</description>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<fixedName>Corprus Victims</fixedName>
+		<factionIconPath>UI/SixthHouseSettlement</factionIconPath>
+		<raidCommonalityFromPointsCurve>
+		  <points>
+			<li>(0, 0.25)</li>
+		  </points>
+		</raidCommonalityFromPointsCurve>
+		<raidLootValueFromPointsCurve>
+		  <points>
+			<li>(0, 0)</li>
+		  </points>
+		</raidLootValueFromPointsCurve>
+		<humanlikeFaction>false</humanlikeFaction>
+		<hidden>true</hidden>
+		<autoFlee>false</autoFlee>
+		<canUseAvoidGrid>false</canUseAvoidGrid>
+		<techLevel>Animal</techLevel>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<allowedArrivalTemperatureRange>-20~100</allowedArrivalTemperatureRange>
+		
+		<earliestRaidDays>20</earliestRaidDays>
+		<permanentEnemy>true</permanentEnemy>
+		
+		<maxPawnCostPerTotalPointsCurve>
+		  <points>
+			<li>(0,35)</li>
+			<li>(70, 50)</li>
+			<li>(800, 100)</li>
+			<li>(1300, 150)</li>
+			<li>(100000, 10000)</li>
+		  </points>
+		</maxPawnCostPerTotalPointsCurve>
+		
+		<pawnGroupMakers>
+		  <li>
+			<!-- Standard raid-->
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<options>
+			  <MorrowRim_CorprusStalker>10</MorrowRim_CorprusStalker>
+			  <MorrowRim_CorprusLame>5</MorrowRim_CorprusLame>
+			  <MorrowRim_CorprusBloated>5</MorrowRim_CorprusBloated>
+			</options>
+		  </li>
+		  <li>
+			<!-- Suicide raid-->
+			<kindDef>Combat</kindDef>
+			<commonality>10</commonality>
+			<options>
+			  <MorrowRim_CorprusBloated>10</MorrowRim_CorprusBloated>
+			</options>
+		  </li>
+		</pawnGroupMakers>
+	</FactionDef>
+	
+</Defs>

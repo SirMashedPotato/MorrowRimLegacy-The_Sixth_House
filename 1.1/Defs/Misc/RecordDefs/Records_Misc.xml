@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecordDef>
+    <defName>MorrowRim_DagothDreamsTargeted</defName>
+    <label>dream incidents</label>
+    <description>The number of times I have been targeted by Dagoth in my sleep.</description>
+    <type>Int</type>
+  </RecordDef>
+ 
+</Defs>

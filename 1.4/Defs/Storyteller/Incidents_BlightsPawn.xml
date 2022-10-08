@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <IncidentDef Name="Dagoth_BlightIncident" Abstract="True">
+    <workerClass>MorrowRim_Dagoth.IncidentWorker_BlightHuman</workerClass>
+    <category>Dagoth_Blight</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+      <li>Map_TempIncident</li>
+      <li>Map_Misc</li>
+      <li>Map_RaidBeacon</li>
+      <li>Caravan</li>
+    </targetTags>
+    <diseaseVictimFractionRange>0.2~0.5</diseaseVictimFractionRange>
+    <letterText>{0} of your {1} have gotten sick from {2}.\n\nEnsure you have a medical bed and a doctor. Make sure that they get proper treatment and spend as much time in bed as possible.\n\nThe following {1} have gotten sick</letterText>
+    <letterDef>NegativeEvent</letterDef>
+  </IncidentDef>
+  
+  <IncidentDef ParentName="Dagoth_BlightIncident">
+    <defName>Dagoth_Blight_AshChancre</defName>
+    <label>Ash-Chancre</label>
+    <diseaseIncident>Dagoth_Blight_AshChancre</diseaseIncident>
+    <letterLabel>Blight: Ash-Chancre</letterLabel>
+  </IncidentDef>
+  
+  <IncidentDef ParentName="Dagoth_BlightIncident">
+    <defName>Dagoth_Blight_AshWoe</defName>
+    <label>Ash-Woe</label>
+    <diseaseIncident>Dagoth_Blight_AshWoe</diseaseIncident>
+    <letterLabel>Blight: Ash-Woe</letterLabel>
+  </IncidentDef>
+  
+  <IncidentDef ParentName="Dagoth_BlightIncident">
+    <defName>Dagoth_Blight_BlackHeart</defName>
+    <label>Black-Heart</label>
+    <diseaseIncident>Dagoth_Blight_BlackHeart</diseaseIncident>
+    <letterLabel>Blight: Black-Heart</letterLabel>
+  </IncidentDef>
+  
+  <IncidentDef ParentName="Dagoth_BlightIncident">
+    <defName>Dagoth_Blight_Chanthrax</defName>
+    <label>Chanthrax</label>
+    <diseaseIncident>Dagoth_Blight_Chanthrax</diseaseIncident>
+    <letterLabel>Blight: Chanthrax</letterLabel>
+  </IncidentDef>
+
+  <!-- animal -->
+  
+  <IncidentDef Name="Dagoth_AnimalBlightIncident" Abstract="True" ParentName="Dagoth_BlightIncident">
+    <workerClass>MorrowRim_Dagoth.IncidentWorker_BlightAnimal</workerClass>
+    <category>Dagoth_Blight</category>
+    <diseaseVictimFractionRange>0.3~0.7</diseaseVictimFractionRange>
+    <letterText>{0} of your animals have gotten sick from {2}.\n\nMake sure that they get proper treatment and rest as much as possible.\n\nThe following animals have gotten sick</letterText>
+    <letterDef>NegativeEvent</letterDef>
+  </IncidentDef>
+  
+  <IncidentDef ParentName="Dagoth_AnimalBlightIncident">
+    <defName>Dagoth_Blight_AnimalAshChancre</defName>
+    <label>Ash-Chancre (animals)</label>
+    <diseaseIncident>Dagoth_Blight_AshChancre</diseaseIncident>
+    <letterLabel>Animal blight: Ash-Chancre</letterLabel>
+  </IncidentDef>
+  
+  <IncidentDef ParentName="Dagoth_AnimalBlightIncident">
+    <defName>Dagoth_Blight_AnimalAshWoe</defName>
+    <label>Ash-Woe (animals)</label>
+    <diseaseIncident>Dagoth_Blight_AshWoe</diseaseIncident>
+    <letterLabel>Animal blight: Ash-Woe</letterLabel>
+  </IncidentDef>
+  
+  <IncidentDef ParentName="Dagoth_AnimalBlightIncident">
+    <defName>Dagoth_Blight_AnimalBlackHeart</defName>
+    <label>Black-Heart (animals)</label>
+    <diseaseIncident>Dagoth_Blight_BlackHeart</diseaseIncident>
+    <letterLabel>Animal blight: Black-Heart</letterLabel>
+  </IncidentDef>
+  
+  <IncidentDef ParentName="Dagoth_AnimalBlightIncident">
+    <defName>Dagoth_Blight_AnimalChanthrax</defName>
+    <label>Chanthrax (animals)</label>
+    <diseaseIncident>Dagoth_Blight_Chanthrax</diseaseIncident>
+    <letterLabel>Animal blight: Chanthrax</letterLabel>
+  </IncidentDef>
+
+</Defs>
