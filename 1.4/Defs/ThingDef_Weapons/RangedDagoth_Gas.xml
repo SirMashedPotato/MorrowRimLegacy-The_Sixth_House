@@ -7,6 +7,7 @@
 		<tickerType>Normal</tickerType>
 		<graphicData>
 			<graphicClass>Graphic_Gas</graphicClass>
+			<shaderType>Transparent</shaderType>
 			<texPath>Things/Gas/Puff</texPath>
 			<drawSize>2.2</drawSize>
 		</graphicData>
