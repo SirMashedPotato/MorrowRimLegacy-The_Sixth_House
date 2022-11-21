@@ -209,7 +209,7 @@
 		<description>The result of one somehow managing to survive the full effects of corprus. The survivor has retained their greatly enhanced strength and gained a resistance to pain, and to corprus itself</description>
 		<defaultLabelColor>(0.4, 0.8, 0.6)</defaultLabelColor>
 		<makesSickThought>false</makesSickThought>
-		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<isBad>false</isBad>
 		<stages>
 			<li>
 				<painOffset>-1</painOffset>
@@ -231,7 +231,6 @@
 		<label>permanent corprus</label>
 		<description>The result of untreated corprus. The victim will now lash out at anything that gets too close with greatly enhanced strength and a complete resistance to pain.</description>
 		<makesSickThought>false</makesSickThought>
-		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
 		<stages>
 			<li>
 				<painOffset>-1</painOffset>
