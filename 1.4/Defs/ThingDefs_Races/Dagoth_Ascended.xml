@@ -133,7 +133,7 @@
 			<baseHealthScale>3.0</baseHealthScale>
 			<lifeStageAges>
 				<li>
-				  <def>HumanlikeAdult</def>
+				  <def>MorrowRim_AshCreature</def>
 				  <minAge>0</minAge>
 				</li>
 			</lifeStageAges>
